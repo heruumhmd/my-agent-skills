@@ -19,6 +19,7 @@ const FORK_OWNED_CONFLICTS = new Set([
   ...INSTALL_DOCS,
   'docs/comparison.md',
   'plugin.json',
+  'scripts/lib/skill-lint.js',
 ]);
 
 function isForkOwnedConflict(file, repo) {
