@@ -89,8 +89,17 @@ foreach ($repo in @($repos.repositories)) {
 $geminiPluginTarget = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.gemini\config\plugins\heru-agent-skills'
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 if (Test-Path -LiteralPath $geminiPluginTarget -PathType Container) {
-    $null = & robocopy $repoRoot $geminiPluginTarget /mir /xd .git /njh /njs /ndl /nc /ns
-    Write-Result 'gemini-plugin' 'SYNC' "Synced to $geminiPluginTarget"
+    if ($exitCode -eq 0) {
+        $null = & robocopy $repoRoot $geminiPluginTarget /mir /xd .git /njh /njs /ndl /nc /ns
+        if ($LASTEXITCODE -ge 8) {
+            Write-Result 'gemini-plugin' 'ERROR' "Robocopy failed with exit code $LASTEXITCODE"
+            $exitCode = 1
+        } else {
+            Write-Result 'gemini-plugin' 'SYNC' "Synced to $geminiPluginTarget"
+        }
+    } else {
+        Write-Result 'gemini-plugin' 'SKIP' "Skipping plugin sync due to earlier git error (exit code $exitCode)"
+    }
 }
 
 exit $exitCode

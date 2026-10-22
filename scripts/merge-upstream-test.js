@@ -193,6 +193,9 @@ test('isForkOwnedConflict recognizes PowerShell scripts, bundles, catalog, autom
   assert.equal(isForkOwnedConflict('bundles/heru-agent-engineering/bundle.json', root), true);
   assert.equal(isForkOwnedConflict('automation/repos.json', root), true);
   assert.equal(isForkOwnedConflict('catalog/skills.json', root), true);
+  assert.equal(isForkOwnedConflict('rules/AGENTS.md', root), true);
+  assert.equal(isForkOwnedConflict('AGENTS.md', root), true);
+  assert.equal(isForkOwnedConflict('scripts/binary-analyzer-test.js', root), true);
   assert.equal(isForkOwnedConflict('agents/academic-paper-writer.md', root), true);
   assert.equal(isForkOwnedConflict('.github/workflows/ci.yml', root), true);
   assert.equal(isForkOwnedConflict('skills/shadcn-ui-engineering/SKILL.md', root), true);
