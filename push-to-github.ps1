@@ -1,4 +1,4 @@
-Write-Output "Pushing D:\agent-skills to https://github.com/heruu-1/my-agent-skills.git..."
+Write-Output "Pushing D:\agent-skills to https://github.com/heruumhmd/my-agent-skills.git..."
 git -C "D:\agent-skills" push -u mybackup main
 if ($LASTEXITCODE -eq 0) {
     git -C "D:\agent-skills" push mybackup --tags

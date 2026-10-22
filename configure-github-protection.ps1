@@ -1,6 +1,6 @@
 [CmdletBinding(SupportsShouldProcess)]
 param(
-    [string]$Repository = 'heruu-1/my-agent-skills',
+    [string]$Repository = 'heruumhmd/my-agent-skills',
     [string]$Branch = 'main',
     [string]$PayloadOutputPath = ''
 )
