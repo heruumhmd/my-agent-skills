@@ -21,19 +21,66 @@ OpenCode uses a **skill-driven execution model** powered by the `skill` tool and
 
 ### Intent → Skill Mapping
 
-The agent should automatically map user intent to skills:
+The agent should automatically map user intent (in English, Indonesian, or mixed) to skills:
 
-- Feature / new functionality → `spec-driven-development`, then `incremental-implementation`, `test-driven-development`
-- Planning / breakdown → `planning-and-task-breakdown`
-- Bug / failure / unexpected behavior → `debugging-and-error-recovery`
-- Legacy codebase investigation / Archeology & reality probing → `code-archeology-and-anti-slop`
-- Reverse engineering / binary analysis / protocol reversing → `reverse-engineering-and-binary-analysis`
-- Thermonuclear structural code review / cognitive debt elimination → `thermonuclear-code-review`
-- Code review → `code-review-and-quality`
-- Removing AI slop / text & doc deslopping → `unslop-code-and-prose`
-- Refactoring / simplification → `code-simplification`
-- API or interface design → `api-and-interface-design`
-- UI work → `frontend-ui-engineering`
+- **Requirements, Clarification & Ideation**:
+  - Starting a task / Unclear requirements / Tanya-jawab requirement → `using-agent-skills` or `interview-me`
+  - Ideation / Concept refining / Socratic stress-testing → `idea-refine`
+  - Enforce project quality bar / CONSTRAINTS.md / Jaga standar mutu → `constraint-driven-development`
+  - Official documentation verification / Cek dokumentasi resmi → `source-driven-development`
+
+- **Design & Architecture**:
+  - Feature / spec definition / PRD → `spec-driven-development`
+  - Planning / breakdown / Pecah task implementasi → `planning-and-task-breakdown`
+  - API / endpoint / contract design / Desain interface → `api-and-interface-design`
+  - Subagent delegation / Multi-agent research / Delegasi subagent → `subagent-orchestration-and-delegation`
+
+- **Implementation & Testing**:
+  - Incremental slices / Perubahan bertahap → `incremental-implementation`
+  - Test-Driven Development (TDD) / Red-Green-Refactor → `test-driven-development`
+  - Frontend UI / Accessibility / Responsive layouts → `frontend-ui-engineering`
+  - Modern React & Next.js UI / shadcn/ui → `shadcn-ui-engineering`
+  - Laravel & PHP backend / Service-Action architecture → `laravel-service-action-architecture`
+
+- **Reverse Engineering, Systems & Binary Analysis**:
+  - Reverse engineering / Binary triage (ELF, PE, Mach-O) / Decompilation / Protocol reversing / Bongkar file biner → `reverse-engineering-and-binary-analysis`
+  - Legacy codebase investigation / Git archeology & reality probing / Blast radius → `code-archeology-and-anti-slop`
+
+- **Code Review, Quality & Deslopping**:
+  - Thermonuclear structural code review / Cognitive debt elimination / 1000-line file limit → `thermonuclear-code-review`
+  - Multi-axis code review / Pre-merge checklist → `code-review-and-quality`
+  - Removing AI slop / Text & doc deslopping / Bersihkan AI fluff → `unslop-code-and-prose`
+  - Refactoring / simplification → `code-simplification`
+  - Adversarial interrogation / Doubt assumptions / Uji keraguan keputusan non-sepele → `doubt-driven-development`
+
+- **Debugging, Reliability & Maintenance**:
+  - Bug / failure / unexpected behavior / Diagnostic recovery → `debugging-and-error-recovery`
+  - Browser testing & DevTools inspection → `browser-testing-with-devtools`
+  - Security auditing & hardening / OWASP protection → `security-and-hardening`
+  - Performance optimization / Bottleneck tuning → `performance-optimization`
+  - Observability / Instrumentation / Logging, metrics & tracing → `observability-and-instrumentation`
+  - Deprecation & safe database migrations (expand/contract) → `deprecation-and-migration`
+
+- **Git, Automation, CI/CD & Launch**:
+  - Git workflow & atomic versioning / Release tagging → `git-workflow-and-versioning`
+  - Architecture Decision Records (ADRs) & documentation → `documentation-and-adrs`
+  - CI/CD build pipelines & quality gates → `ci-cd-and-automation`
+  - Shipping & production launch checklist → `shipping-and-launch`
+
+- **AI Agents, Frameworks & Machine Learning**:
+  - Agent memory & persistent habits → `agent-memory-and-instincts`
+  - Context window optimization & session engineering → `context-engineering`
+  - Codebase context indexing & vector search → `codebase-context-indexing`
+  - 4-Engine hyper-efficient agent architecture → `hyper-efficient-agent-architecture`
+  - PydanticAI type-safe structured agents → `pydantic-ai-structured-agents`
+  - Smolagents code-first lightweight agents → `smolagents-code-first-agents`
+  - LangGraph stateful multi-agent workflows → `langgraph-stateful-agent-design`
+  - Applied ML system design → `applied-ml-system-design`
+  - ML data preprocessing & leakage prevention → `ml-data-preprocessing-and-leakage-prevention`
+  - ML model evaluation & metrics analysis → `ml-model-evaluation-and-metrics`
+  - Neural network training recipe (PyTorch) → `neural-network-training-recipe`
+  - UV Python package manager & virtualenvs → `uv-python-package-manager`
+  - Academic journal LaTeX drafting & formatting → `academic-journal-latex-workflow`
 
 ### Lifecycle Mapping (Implicit Commands)
 

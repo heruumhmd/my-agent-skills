@@ -17,8 +17,10 @@ const FORK_OWNED_CONFLICTS = new Set([
   '.codex-plugin/plugin.json',
   '.github/workflows/test-plugin-install.yml',
   ...INSTALL_DOCS,
+  'AGENTS.md',
   'docs/comparison.md',
   'plugin.json',
+  'scripts/binary-analyzer-test.js',
   'scripts/lib/skill-lint.js',
 ]);
 
