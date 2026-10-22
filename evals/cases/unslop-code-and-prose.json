@@ -1,0 +1,46 @@
+{
+  "skill_name": "unslop-code-and-prose",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Deslop this pull request description and remove all AI buzzwords and chatbot tells",
+        "top_k": 3
+      },
+      {
+        "prompt": "Edit this technical architecture documentation to remove fluffy metaphors and passive voice",
+        "top_k": 3
+      },
+      {
+        "prompt": "Clean up these verbose AI-generated code comments so they only state concrete invariants",
+        "top_k": 3
+      },
+      {
+        "prompt": "Remove sycophantic chatbot phrases and filler from our ADR draft",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Find the root cause of this null pointer exception in the build logs",
+        "owner": "debugging-and-error-recovery"
+      },
+      {
+        "prompt": "Decompile this ELF binary and explain its assembly instructions",
+        "owner": "reverse-engineering-and-binary-analysis"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Edit an AI-written pull request description full of terms like 'crucial', 'delve', 'testament to', and sycophantic greetings.",
+      "expected_output": "A deslopped, active-voice technical summary stating concrete changes, measurements, and verification proof.",
+      "expectations": [
+        "Eliminates AI vocabulary tells such as delve, crucial, testament, or tapestry",
+        "Removes chatbot conversational greetings and filler pleasantries",
+        "Replaces emotional or vague qualifiers with concrete technical mechanisms"
+      ]
+    }
+  ]
+}

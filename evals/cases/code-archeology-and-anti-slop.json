@@ -1,0 +1,45 @@
+{
+  "skill_name": "code-archeology-and-anti-slop",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Investigate this unfamiliar legacy module using code archeology and git blame history before modifying it",
+        "top_k": 3
+      },
+      {
+        "prompt": "Purge AI-generated slop, speculative wrappers, and ceremonial boilerplate from this PR",
+        "top_k": 3
+      },
+      {
+        "prompt": "Run a throwaway reality probe to verify how this legacy API behaves instead of guessing",
+        "top_k": 3
+      },
+      {
+        "prompt": "Trace the blast radius and historical architectural intent of this subsystem before refactoring",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Refactor this clean function for clarity without changing its behavior",
+        "owner": "code-simplification"
+      },
+      {
+        "prompt": "Design a new REST API endpoint with boundary validation",
+        "owner": "api-and-interface-design"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Investigate a complex undocumented legacy subsystem where historical intent is unknown, trace invariants via git history, and design a minimal change without AI slop.",
+      "expected_output": "Rigorous code archeology report detailing observed invariants, reality probe results, and minimal diff plan.",
+      "expectations": [
+        "Distinguishes confirmed architectural invariants from speculation.",
+        "Eliminates unnecessary wrapper layers and speculative abstractions."
+      ]
+    }
+  ]
+}

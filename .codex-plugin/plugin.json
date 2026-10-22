@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "Heru Agent Skills",
     "shortDescription": "Senior-engineer workflows for AI coding agents: spec, plan, build, test, review, ship.",
-    "longDescription": "Heru Agent Skills bundles 40 engineering, research, ML, and agent-development workflows with deterministic validation and safe Windows automation.",
+    "longDescription": "Heru Agent Skills bundles 44 engineering, research, ML, and agent-development workflows with deterministic validation and safe Windows automation.",
     "developerName": "Heru",
     "category": "Productivity",
     "capabilities": [

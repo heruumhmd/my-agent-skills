@@ -2,30 +2,155 @@
   "schema_version": 2,
   "repository": "https://github.com/heruu-1/my-agent-skills",
   "release": "0.7.7",
-  "total_skills": 40,
+  "total_skills": 44,
   "upstream_skills": 25,
-  "extension_skills": 15,
+  "extension_skills": 19,
   "provenance": {
     "source_repository": "https://github.com/heruu-1/my-agent-skills",
     "source_commit": "fedd23c",
     "last_verified": "2026-08-25",
-    "compatibility": ["codex", "claude-code", "cursor", "gemini-cli", "antigravity", "opencode"]
+    "compatibility": [
+      "codex",
+      "claude-code",
+      "cursor",
+      "gemini-cli",
+      "antigravity",
+      "opencode"
+    ]
   },
   "skills": [
-    {"name":"academic-journal-latex-workflow","bundle":"heru-research-ml","source_path":"skills/academic-journal-latex-workflow","license":"MIT","modified":true},
-    {"name":"agent-memory-and-instincts","bundle":"heru-agent-engineering","source_path":"skills/agent-memory-and-instincts","license":"MIT","modified":true},
-    {"name":"applied-ml-system-design","bundle":"heru-research-ml","source_path":"skills/applied-ml-system-design","license":"MIT","modified":true},
-    {"name":"codebase-context-indexing","bundle":"heru-agent-engineering","source_path":"skills/codebase-context-indexing","license":"MIT","modified":true},
-    {"name":"hyper-efficient-agent-architecture","bundle":"heru-agent-engineering","source_path":"skills/hyper-efficient-agent-architecture","license":"MIT","modified":true},
-    {"name":"langgraph-stateful-agent-design","bundle":"heru-agent-engineering","source_path":"skills/langgraph-stateful-agent-design","license":"MIT","modified":true},
-    {"name":"laravel-service-action-architecture","bundle":"heru-web-tooling","source_path":"skills/laravel-service-action-architecture","license":"MIT","modified":true},
-    {"name":"ml-data-preprocessing-and-leakage-prevention","bundle":"heru-research-ml","source_path":"skills/ml-data-preprocessing-and-leakage-prevention","license":"MIT","modified":true},
-    {"name":"ml-model-evaluation-and-metrics","bundle":"heru-research-ml","source_path":"skills/ml-model-evaluation-and-metrics","license":"MIT","modified":true},
-    {"name":"neural-network-training-recipe","bundle":"heru-research-ml","source_path":"skills/neural-network-training-recipe","license":"MIT","modified":true},
-    {"name":"pydantic-ai-structured-agents","bundle":"heru-agent-engineering","source_path":"skills/pydantic-ai-structured-agents","license":"MIT","modified":true},
-    {"name":"shadcn-ui-engineering","bundle":"heru-web-tooling","source_path":"skills/shadcn-ui-engineering","license":"MIT","modified":true},
-    {"name":"smolagents-code-first-agents","bundle":"heru-agent-engineering","source_path":"skills/smolagents-code-first-agents","license":"MIT","modified":true},
-    {"name":"subagent-orchestration-and-delegation","bundle":"heru-agent-engineering","source_path":"skills/subagent-orchestration-and-delegation","license":"MIT","modified":true},
-    {"name":"uv-python-package-manager","bundle":"heru-web-tooling","source_path":"skills/uv-python-package-manager","license":"MIT","modified":true}
+    {
+      "name": "academic-journal-latex-workflow",
+      "bundle": "heru-research-ml",
+      "source_path": "skills/academic-journal-latex-workflow",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "agent-memory-and-instincts",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/agent-memory-and-instincts",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "applied-ml-system-design",
+      "bundle": "heru-research-ml",
+      "source_path": "skills/applied-ml-system-design",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "code-archeology-and-anti-slop",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/code-archeology-and-anti-slop",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "codebase-context-indexing",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/codebase-context-indexing",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "hyper-efficient-agent-architecture",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/hyper-efficient-agent-architecture",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "langgraph-stateful-agent-design",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/langgraph-stateful-agent-design",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "laravel-service-action-architecture",
+      "bundle": "heru-web-tooling",
+      "source_path": "skills/laravel-service-action-architecture",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "ml-data-preprocessing-and-leakage-prevention",
+      "bundle": "heru-research-ml",
+      "source_path": "skills/ml-data-preprocessing-and-leakage-prevention",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "ml-model-evaluation-and-metrics",
+      "bundle": "heru-research-ml",
+      "source_path": "skills/ml-model-evaluation-and-metrics",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "neural-network-training-recipe",
+      "bundle": "heru-research-ml",
+      "source_path": "skills/neural-network-training-recipe",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "pydantic-ai-structured-agents",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/pydantic-ai-structured-agents",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "reverse-engineering-and-binary-analysis",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/reverse-engineering-and-binary-analysis",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "shadcn-ui-engineering",
+      "bundle": "heru-web-tooling",
+      "source_path": "skills/shadcn-ui-engineering",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "smolagents-code-first-agents",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/smolagents-code-first-agents",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "subagent-orchestration-and-delegation",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/subagent-orchestration-and-delegation",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "thermonuclear-code-review",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/thermonuclear-code-review",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "unslop-code-and-prose",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/unslop-code-and-prose",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "uv-python-package-manager",
+      "bundle": "heru-web-tooling",
+      "source_path": "skills/uv-python-package-manager",
+      "license": "MIT",
+      "modified": true
+    }
   ]
 }

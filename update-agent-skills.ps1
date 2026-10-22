@@ -84,4 +84,14 @@ foreach ($repo in @($repos.repositories)) {
     }
 }
 
+
+# Automatically sync to Antigravity global plugin directory
+$geminiPluginTarget = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.gemini\config\plugins\heru-agent-skills'
+$repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+if (Test-Path -LiteralPath $geminiPluginTarget -PathType Container) {
+    $null = & robocopy $repoRoot $geminiPluginTarget /mir /xd .git /njh /njs /ndl /nc /ns
+    Write-Result 'gemini-plugin' 'SYNC' "Synced to $geminiPluginTarget"
+}
+
 exit $exitCode
+

@@ -26,7 +26,11 @@ The agent should automatically map user intent to skills:
 - Feature / new functionality → `spec-driven-development`, then `incremental-implementation`, `test-driven-development`
 - Planning / breakdown → `planning-and-task-breakdown`
 - Bug / failure / unexpected behavior → `debugging-and-error-recovery`
+- Legacy codebase investigation / Archeology & reality probing → `code-archeology-and-anti-slop`
+- Reverse engineering / binary analysis / protocol reversing → `reverse-engineering-and-binary-analysis`
+- Thermonuclear structural code review / cognitive debt elimination → `thermonuclear-code-review`
 - Code review → `code-review-and-quality`
+- Removing AI slop / text & doc deslopping → `unslop-code-and-prose`
 - Refactoring / simplification → `code-simplification`
 - API or interface design → `api-and-interface-design`
 - UI work → `frontend-ui-engineering`

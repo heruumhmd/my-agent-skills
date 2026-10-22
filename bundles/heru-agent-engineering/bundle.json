@@ -1,14 +1,18 @@
 {
   "name": "heru-agent-engineering",
   "version": "0.7.7",
-  "description": "Agent architecture, memory, context, orchestration, and structured-agent workflows.",
+  "description": "Agent architecture, memory, context, code archeology, reverse engineering, rigorous code review, and structured workflows.",
   "skills": [
     "agent-memory-and-instincts",
+    "code-archeology-and-anti-slop",
     "codebase-context-indexing",
     "hyper-efficient-agent-architecture",
     "langgraph-stateful-agent-design",
     "pydantic-ai-structured-agents",
+    "reverse-engineering-and-binary-analysis",
     "smolagents-code-first-agents",
-    "subagent-orchestration-and-delegation"
+    "subagent-orchestration-and-delegation",
+    "thermonuclear-code-review",
+    "unslop-code-and-prose"
   ]
 }

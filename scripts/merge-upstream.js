@@ -25,7 +25,7 @@ const FORK_OWNED_CONFLICTS = new Set([
 function isForkOwnedConflict(file, repo) {
   if (FORK_OWNED_CONFLICTS.has(file)) return true;
   if (file.endsWith('.ps1')) return true;
-  if (file.startsWith('bundles/') || file.startsWith('automation/') || file.startsWith('catalog/')) return true;
+  if (file.startsWith('bundles/') || file.startsWith('automation/') || file.startsWith('catalog/') || file.startsWith('rules/')) return true;
   if (file === 'agents/academic-paper-writer.md' || file === 'agents/ml-research-engineer.md') return true;
   if (file.startsWith('.github/workflows/') && (file.endsWith('ci.yml') || file.endsWith('weekly-upstream-sync.yml') || file.endsWith('publish-release.yml'))) return true;
 
@@ -36,6 +36,21 @@ function isForkOwnedConflict(file, repo) {
       if (fs.existsSync(catalogPath)) {
         const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
         if (Array.isArray(catalog.skills) && catalog.skills.some((s) => s.name === skillMatch[1])) {
+          return true;
+        }
+      }
+    } catch {
+      // Fall back if catalog cannot be parsed
+    }
+  }
+
+  const evalMatch = file.match(/^evals\/cases\/([^/]+)\.json$/);
+  if (evalMatch && repo) {
+    try {
+      const catalogPath = path.join(repo, 'catalog', 'skills.json');
+      if (fs.existsSync(catalogPath)) {
+        const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+        if (Array.isArray(catalog.skills) && catalog.skills.some((s) => s.name === evalMatch[1])) {
           return true;
         }
       }

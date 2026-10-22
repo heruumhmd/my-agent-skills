@@ -46,7 +46,7 @@ Skills also activate automatically based on what you're doing — designing an A
 **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more):
 
 ```bash
-npx skills add heruu-1/my-agent-skills            # install all 40 skills
+npx skills add heruu-1/my-agent-skills            # install all 44 skills
 npx skills add heruu-1/my-agent-skills --list     # browse before installing
 ```
 
@@ -217,9 +217,9 @@ Already installed? How you roll the pack out depends on your codebase. The **[Ad
 
 ---
 
-## All 40 Skills
+## All 44 Skills
 
-The commands above are entry points. This distribution includes 40 skills total: 25 upstream lifecycle skills plus 15 Heru extensions for research, ML, agent architecture, and web tooling. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
+The commands above are entry points. This distribution includes 44 skills total: 25 upstream lifecycle skills plus 19 Heru extensions for research, ML, reverse engineering, agent architecture, and web tooling. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 
 ### Meta - Discover which skill applies
 
@@ -260,13 +260,17 @@ The commands above are entry points. This distribution includes 40 skills total:
 |-------|-------------|----------|
 | [browser-testing-with-devtools](skills/browser-testing-with-devtools/SKILL.md) | Chrome DevTools MCP for live runtime data - DOM inspection, console logs, network traces, performance profiling | Building or debugging anything that runs in a browser |
 | [debugging-and-error-recovery](skills/debugging-and-error-recovery/SKILL.md) | Five-step triage: reproduce, localize, reduce, fix, guard. Stop-the-line rule, safe fallbacks | Tests fail, builds break, or behavior is unexpected |
+| [code-archeology-and-anti-slop](skills/code-archeology-and-anti-slop/SKILL.md) | Deep git history archeology, reality probing, and purging AI ceremonial boilerplate | Investigating unfamiliar legacy code or testing API behavior with probes |
+| [reverse-engineering-and-binary-analysis](skills/reverse-engineering-and-binary-analysis/SKILL.md) | Static decompilation, dynamic tracing, protocol reversing, firmware unpacking | Disassembling native binaries, decompiling bytecodes, or reversing protocols |
 
 ### Review - Quality gates before merge
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
 | [code-review-and-quality](skills/code-review-and-quality/SKILL.md) | Five-axis review, change sizing (~100 lines), severity labels (Nit/Optional/FYI), review speed norms, splitting strategies | Before merging any change |
+| [thermonuclear-code-review](skills/thermonuclear-code-review/SKILL.md) | Uncompromising structural critique, code-judo reframing, 1000-line boundary enforcement | Reviewing complex PRs to delete architectural bloat and cognitive debt |
 | [code-simplification](skills/code-simplification/SKILL.md) | Chesterton's Fence, Rule of 500, reduce complexity while preserving exact behavior | Code works but is harder to read or maintain than it should be |
+| [unslop-code-and-prose](skills/unslop-code-and-prose/SKILL.md) | Eliminates AI writing tells, chatbot idioms, sycophancy, and filler from docs and code | Editing PR descriptions, documentation, ADRs, commit logs, or comments |
 | [security-and-hardening](skills/security-and-hardening/SKILL.md) | OWASP Top 10 prevention, auth patterns, secrets management, dependency auditing, three-tier boundary system | Handling user input, auth, data storage, or external integrations |
 | [performance-optimization](skills/performance-optimization/SKILL.md) | Measure-first approach - Core Web Vitals targets, profiling workflows, bundle analysis, anti-pattern detection | Performance requirements exist or you suspect regressions |
 
@@ -349,7 +353,7 @@ Every skill follows a consistent anatomy:
 
 ```
 agent-skills/
-├── skills/                            # 40 skills (25 upstream + 15 Heru extensions)
+├── skills/                            # 44 skills (25 upstream + 19 Heru extensions)
 │   ├── interview-me/                  #   Define
 │   ├── idea-refine/                   #   Define
 │   ├── spec-driven-development/       #   Define

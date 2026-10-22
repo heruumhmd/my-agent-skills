@@ -1,0 +1,46 @@
+{
+  "skill_name": "thermonuclear-code-review",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Conduct a thermonuclear code review on this PR to eliminate architectural bloat",
+        "top_k": 3
+      },
+      {
+        "prompt": "This pull request adds 800 lines of complex branching, review it for code-judo simplifications",
+        "top_k": 3
+      },
+      {
+        "prompt": "Critique this design for cognitive debt, leaky abstractions, and module boundaries",
+        "top_k": 3
+      },
+      {
+        "prompt": "Aggressively review this diff that pushes user-service over 1000 lines",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Run unit tests and check code coverage",
+        "owner": "test-driven-development"
+      },
+      {
+        "prompt": "Format this document to remove AI buzzwords and chatbot tone",
+        "owner": "unslop-code-and-prose"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Review a proposed pull request that introduces 6 conditional flags and adds 400 lines to an already crowded core handler.",
+      "expected_output": "Thermonuclear structural review flagging cognitive debt, the 1000-line boundary, and providing a code-judo alternative.",
+      "expectations": [
+        "Identifies structural complexity and branching proliferation as primary blockers",
+        "Evaluates file size and cohesion boundaries rather than cosmetic style nits",
+        "Proposes a concrete architectural simplification (code-judo reframing) that eliminates the conditional sprawl"
+      ]
+    }
+  ]
+}

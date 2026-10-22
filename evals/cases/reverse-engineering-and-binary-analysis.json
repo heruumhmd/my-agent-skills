@@ -1,0 +1,45 @@
+{
+  "skill_name": "reverse-engineering-and-binary-analysis",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Analyze this compiled ELF binary and check its security mitigations, architecture, and entropy",
+        "top_k": 3
+      },
+      {
+        "prompt": "Disassemble this function and interpret the x86_64 assembly logic and calling conventions",
+        "top_k": 3
+      },
+      {
+        "prompt": "Reverse engineer this proprietary network protocol payload and unpack its binary framing",
+        "top_k": 3
+      },
+      {
+        "prompt": "Inspect this Ghidra decompilation and locate cryptographic constant signatures and string references",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Audit this web form for cross-site scripting vulnerabilities",
+        "owner": "security-and-hardening"
+      },
+      {
+        "prompt": "Debug why this unit test failed after refactoring",
+        "owner": "debugging-and-error-recovery"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Perform static triage on a stripped 64-bit ELF executable, identify its architecture, check NX and ASLR mitigations, and detect potential packing.",
+      "expected_output": "Structured binary triage report separating observed metadata, disassembled features, and unverified hypotheses.",
+      "expectations": [
+        "Binary architecture, bitness, endianness, and security mitigations are clearly identified.",
+        "Packing and entropy analysis is clearly separated from confirmed code logic."
+      ]
+    }
+  ]
+}
