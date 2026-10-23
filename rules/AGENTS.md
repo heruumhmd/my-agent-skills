@@ -63,7 +63,7 @@ These rules enforce a skill-first execution model across all conversations and t
    - **AI Agents, Frameworks & Machine Learning**:
      - Persistent agent memory / Habits & instincts / Hindari kesalahan berulang agen → `agent-memory-and-instincts`
      - Context window engineering / Session optimization / Startup rules setup → `context-engineering`
-     - Token optimization / Prompt compression / Kurangi penggunaan token / Hemat token / AST skeletons & cache optimization → `token-optimization`
+     - Token optimization / Prompt compression / Kurangi penggunaan token / Hemat token / Menghemat token / Optimasi token / Kompresi prompt / Context compression / AST skeletons & cache optimization → `token-optimization`
      - Local codebase indexing / Vector code search / Context retrieval → `codebase-context-indexing`
      - 4-Engine hyper-efficient agent architecture (CodeAct, Actor-Critic, Speculative Drafting) → `hyper-efficient-agent-architecture`
      - PydanticAI / Type-safe structured agents & tool calling → `pydantic-ai-structured-agents`
