@@ -18,7 +18,7 @@ OpenCode uses a **skill-driven execution model** powered by the `skill` tool and
 - Skills are located in `skills/<skill-name>/SKILL.md`
 - Never implement directly if a skill applies
 - Always follow the skill instructions exactly (do not partially apply them)
-- **Universal Ambient Token Economy**: In every interaction, preserve context by default: use targeted file line bounds, pinpoint surgical diffs, concise responses without filler, and compact AST signatures instead of dumping raw file contents.
+- **Universal Ambient Token Economy**: In every interaction, preserve context by default: use targeted file line bounds, pinpoint surgical diffs, concise responses without filler, and compact AST signatures instead of dumping raw file contents. NEVER sacrifice code correctness, architectural depth, security, testing, or completeness; only eliminate noise and filler.
 
 ### Intent → Skill Mapping
 

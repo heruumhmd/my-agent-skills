@@ -20,6 +20,7 @@ These rules enforce a skill-first execution model across all conversations and t
      - **AST Skeletons for Multi-File Context**: When analyzing architecture across multiple files, maintain structural signatures (classes, functions, types) rather than loading entire implementation bodies into context.
      - **Concise Responses**: Be direct and code-focused; avoid sycophantic conversational filler, AI throat-clearing, and repeating entire code files back to the user.
      - **Output Pruning**: Avoid dumping large raw terminal/tool outputs or unbounded JSON payloads into context.
+     - **Zero Quality Degradation**: Token economy MUST NEVER sacrifice code correctness, architectural depth, security, thorough testing, or implementation completeness. Never use lazy stubs (`// TODO`, unwritten bodies), never skip edge cases, and never cut corners on critical logic. Only eliminate noise, repetitive raw data, and conversational filler.
 
 4. **Intent to Skill Mapping (Automatic Zero-Command Selection)**:
    Match user prompts (in English, Indonesian, or mixed) automatically to the appropriate skill without requiring slash commands:
