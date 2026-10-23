@@ -13,7 +13,15 @@ These rules enforce a skill-first execution model across all conversations and t
    - Always follow the skill instructions thoroughly; do not partially apply them or bypass established steps.
    - Maintain the exit criteria and verification checks specified in each skill.
 
-3. **Intent to Skill Mapping (Automatic Zero-Command Selection)**:
+3. **Universal Ambient Token Economy (Always Active Across All Tasks)**:
+   - Regardless of whether the user explicitly mentions token optimization, the agent MUST automatically apply token-saving discipline on every interaction to prevent context rot:
+     - **Targeted Reading**: Never read entire large files without line bounds (`StartLine`/`EndLine`); inspect only relevant symbols and ranges.
+     - **Surgical Edits**: Prefer pinpoint search-and-replace edits over rewriting full files.
+     - **AST Skeletons for Multi-File Context**: When analyzing architecture across multiple files, maintain structural signatures (classes, functions, types) rather than loading entire implementation bodies into context.
+     - **Concise Responses**: Be direct and code-focused; avoid sycophantic conversational filler, AI throat-clearing, and repeating entire code files back to the user.
+     - **Output Pruning**: Avoid dumping large raw terminal/tool outputs or unbounded JSON payloads into context.
+
+4. **Intent to Skill Mapping (Automatic Zero-Command Selection)**:
    Match user prompts (in English, Indonesian, or mixed) automatically to the appropriate skill without requiring slash commands:
 
    - **Requirements, Ideation & Clarification**:
@@ -76,7 +84,7 @@ These rules enforce a skill-first execution model across all conversations and t
      - UV Python package manager / Fast virtualenvs & script execution → `uv-python-package-manager`
      - Academic LaTeX paper drafting / Journal styling & bibtex debugging → `academic-journal-latex-workflow`
 
-4. **Anti-Rationalization**:
+5. **Anti-Rationalization**:
    The following thoughts are violations of the workflow and MUST be rejected:
    - "This task is too small or simple for a skill"
    - "I will just quickly write the code and skip the skill"
