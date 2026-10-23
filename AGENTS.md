@@ -70,6 +70,7 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
 - **AI Agents, Frameworks & Machine Learning**:
   - Agent memory & persistent habits → `agent-memory-and-instincts`
   - Context window optimization & session engineering → `context-engineering`
+  - Token optimization, prompt compression & AST pruning / Hemat token → `token-optimization`
   - Codebase context indexing & vector search → `codebase-context-indexing`
   - 4-Engine hyper-efficient agent architecture → `hyper-efficient-agent-architecture`
   - PydanticAI type-safe structured agents → `pydantic-ai-structured-agents`
