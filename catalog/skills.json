@@ -2,9 +2,9 @@
   "schema_version": 2,
   "repository": "https://github.com/heruu-1/my-agent-skills",
   "release": "0.7.7",
-  "total_skills": 44,
+  "total_skills": 45,
   "upstream_skills": 25,
-  "extension_skills": 19,
+  "extension_skills": 20,
   "provenance": {
     "source_repository": "https://github.com/heruu-1/my-agent-skills",
     "source_commit": "fedd23c",
@@ -135,6 +135,13 @@
       "name": "thermonuclear-code-review",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/thermonuclear-code-review",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "token-optimization",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/token-optimization",
       "license": "MIT",
       "modified": true
     },

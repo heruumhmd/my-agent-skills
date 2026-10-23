@@ -1,0 +1,43 @@
+{
+  "skill_name": "token-optimization",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "How can I reduce token consumption and compress prompts across multi-turn agent sessions?",
+        "top_k": 3
+      },
+      {
+        "prompt": "Our agent hits context rot and burns too many tokens reading files. Compress code with AST skeletons and optimize prompt cache hits.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Bagaimana cara menghemat token dan melakukan context compression agar agent hemat biaya dan tidak context rot?",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Write unit tests with red-green-refactor cycles for the payment calculator",
+        "owner": "test-driven-development"
+      },
+      {
+        "prompt": "Audit this API endpoint for SQL injection and cross-site scripting vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "The agent session is rapidly exhausting tokens due to multi-thousand-line test outputs and full codebase reads. Propose and apply token optimization.",
+      "expected_output": "A comprehensive token-optimization strategy implementing AST skeletonization, prompt cache stratification, and log output filtering.",
+      "expectations": [
+        "Recommends AST code skeletonization to strip implementation bodies while retaining interface contracts",
+        "Enforces prompt cache prefix stratification for static rules and tool schemas",
+        "Compresses verbose test runner and build output into concise triage summaries",
+        "Establishes a 50% capacity compaction horizon to prevent attention rot"
+      ]
+    }
+  ]
+}
