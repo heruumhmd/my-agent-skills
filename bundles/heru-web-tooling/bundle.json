@@ -1,8 +1,10 @@
 {
   "name": "heru-web-tooling",
   "version": "0.7.7",
-  "description": "Laravel architecture, modern frontend UI, and reproducible Python package management.",
+  "description": "Laravel architecture, modern frontend UI, browser automation, and reproducible Python package management.",
   "skills": [
+    "agent-browser-automation",
+    "impeccable-frontend-design",
     "laravel-service-action-architecture",
     "shadcn-ui-engineering",
     "uv-python-package-manager"

@@ -1,0 +1,43 @@
+{
+  "skill_name": "codebase-knowledge-graph",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Construct an interactive codebase knowledge graph with AST parsing and subagents for this 200k LOC repository.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Map the blast radius and call graph dependencies using .ua/ understand-anything knowledge graph without blowing context.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Petakan arsitektur dan call-graph codebase legacy raksasa ke knowledge graph (.ua/) agar navigasi hemat token tanpa baca semua file.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Write unit tests for the order checkout pipeline using red-green-refactor",
+        "owner": "test-driven-development"
+      },
+      {
+        "prompt": "Decompile and trace stripped Go binary symbols using gopclntab",
+        "owner": "reverse-engineering-and-binary-analysis"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "We are tasked with updating payment models across a 150k LOC monolith. Reading all files will crash the agent context. How should we navigate the codebase?",
+      "expected_output": "A structured knowledge graph approach utilizing AST structural parsing, parallel semantic subagent annotation, and graph-based caller/callee querying.",
+      "expectations": [
+        "Recommends AST extraction of symbols and call hierarchies into a structured graph",
+        "Utilizes graph querying (callers, callees, blast radius) instead of full file reads",
+        "Employs parallel subagents for boundary and contract annotation",
+        "Establishes incremental updates via post-commit hooks"
+      ]
+    }
+  ]
+}

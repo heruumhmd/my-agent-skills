@@ -1,0 +1,43 @@
+{
+  "skill_name": "superpowers-autonomous-engineering",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Run an autonomous feature implementation using obra superpowers workflow with git worktree isolation and 2-5 min task slicing.",
+        "top_k": 3
+      },
+      {
+        "prompt": "We need disciplined autonomous vibe coding: isolate in a git worktree, enforce strict TDD, and delete any code written before tests.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Gunakan workflow superpowers untuk otomasi rekayasa software: brainstorming, isolasi git worktree, TDD ketat, dan subagent per task.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Audit the binary executable for buffer overflow vulnerabilities using checksec",
+        "owner": "reverse-engineering-and-binary-analysis"
+      },
+      {
+        "prompt": "Set up a GitHub Actions CI pipeline for automated testing and linting",
+        "owner": "ci-cd-and-automation"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "We want our AI agent to autonomously implement a user billing subsystem over several hours without taking shortcuts or corrupting the main codebase. How should it proceed?",
+      "expected_output": "An autonomous engineering loop based on superpowers methodology: requirement brainstorming, git worktree isolation, micro-task slicing, strict TDD with code deletion rules, and cross-subagent review.",
+      "expectations": [
+        "Enforces git worktree isolation to sandbox changes from the main working directory",
+        "Deconstructs the feature into 2-5 minute verifiable task slices",
+        "Mandates strict Red-Green-Refactor with immediate deletion of unverified code",
+        "Coordinates worker subagents and adversarial reviewer subagents for each slice"
+      ]
+    }
+  ]
+}

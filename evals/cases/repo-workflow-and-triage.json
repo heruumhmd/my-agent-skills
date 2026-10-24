@@ -1,0 +1,43 @@
+{
+  "skill_name": "repo-workflow-and-triage",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Triage incoming bug reports, deduplicate issues, and convert approved tickets into formal specifications using docs/agents/.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Onboard an agent onto this repository with Wayfinder and decompose the project PRD into tracker-ready actionable tickets.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Standarisasi workflow repositori, issue triage, to-spec, dan to-tickets dengan memisahkan state docs/agents/ dari instruksi skill.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Decompile this APK using jadx and reconstruct the API endpoint URLs",
+        "owner": "reverse-engineering-and-binary-analysis"
+      },
+      {
+        "prompt": "Tests fail and the API throws unexpected 500 errors in production, find what broke and fix the root cause",
+        "owner": "debugging-and-error-recovery"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "We receive messy user bug reports on our issue tracker. How can we standardize agent onboarding, triage incoming bugs, and produce actionable specifications?",
+      "expected_output": "A workflow architecture based on Matt Pocock's skills standard: separating repo configuration in docs/agents/, using Wayfinder for onboarding, systematic triage, to-spec, and to-tickets decomposition.",
+      "expectations": [
+        "Separates repo configuration in docs/agents/ from skill logic for tracker portability",
+        "Applies Wayfinder for repo orientation and entrypoint discovery",
+        "Provides structured issue triage with deduplication and severity ranking",
+        "Converts triaged issues into formal specs and actionable decomposed tickets"
+      ]
+    }
+  ]
+}

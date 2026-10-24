@@ -2,9 +2,9 @@
   "schema_version": 2,
   "repository": "https://github.com/heruu-1/my-agent-skills",
   "release": "0.7.7",
-  "total_skills": 45,
+  "total_skills": 51,
   "upstream_skills": 25,
-  "extension_skills": 20,
+  "extension_skills": 26,
   "provenance": {
     "source_repository": "https://github.com/heruu-1/my-agent-skills",
     "source_commit": "fedd23c",
@@ -27,9 +27,23 @@
       "modified": true
     },
     {
+      "name": "agent-browser-automation",
+      "bundle": "heru-web-tooling",
+      "source_path": "skills/agent-browser-automation",
+      "license": "MIT",
+      "modified": true
+    },
+    {
       "name": "agent-memory-and-instincts",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/agent-memory-and-instincts",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "agentic-harness-patterns",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/agentic-harness-patterns",
       "license": "MIT",
       "modified": true
     },
@@ -55,9 +69,23 @@
       "modified": true
     },
     {
+      "name": "codebase-knowledge-graph",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/codebase-knowledge-graph",
+      "license": "MIT",
+      "modified": true
+    },
+    {
       "name": "hyper-efficient-agent-architecture",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/hyper-efficient-agent-architecture",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "impeccable-frontend-design",
+      "bundle": "heru-web-tooling",
+      "source_path": "skills/impeccable-frontend-design",
       "license": "MIT",
       "modified": true
     },
@@ -104,6 +132,13 @@
       "modified": true
     },
     {
+      "name": "repo-workflow-and-triage",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/repo-workflow-and-triage",
+      "license": "MIT",
+      "modified": true
+    },
+    {
       "name": "reverse-engineering-and-binary-analysis",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/reverse-engineering-and-binary-analysis",
@@ -128,6 +163,13 @@
       "name": "subagent-orchestration-and-delegation",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/subagent-orchestration-and-delegation",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "superpowers-autonomous-engineering",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/superpowers-autonomous-engineering",
       "license": "MIT",
       "modified": true
     },

@@ -17,18 +17,23 @@ When a task arrives, identify the development phase and apply the corresponding 
 Task arrives
     │
     ├── Don't know what you want yet? ──────→ interview-me
-    ├── Have a rough concept, need variants? → idea-refine
+    ├── Need repo orientation / issue triage? → repo-workflow-and-triage
     ├── New project/feature/change? ──→ spec-driven-development
+    ├── Multi-hour autonomous vibe-coding? ─→ superpowers-autonomous-engineering
     ├── No quality bar written down? ──→ constraint-driven-development
     ├── Have a spec, need tasks? ──────→ planning-and-task-breakdown
+    ├── Navigating massive codebase (>100k LOC)? → codebase-knowledge-graph
     ├── Implementing code? ────────────→ incremental-implementation
-    │   ├── UI work? ─────────────────→ frontend-ui-engineering
+    │   ├── UI work / anti-slop? ─────→ impeccable-frontend-design
+    │   ├── General UI / accessibility? → frontend-ui-engineering
     │   ├── API work? ────────────────→ api-and-interface-design
+    │   ├── Context harness architecture? → agentic-harness-patterns
     │   ├── Need better context? ─────→ context-engineering
     │   ├── Need doc-verified code? ───→ source-driven-development
     │   └── Stakes high / unfamiliar code? ──→ doubt-driven-development
     ├── Writing/running tests? ────────→ test-driven-development
-    │   └── Browser-based? ───────────→ browser-testing-with-devtools
+    │   ├── Browser automation / CDP? → agent-browser-automation
+    │   └── Browser runtime debugging? → browser-testing-with-devtools
     ├── Something broke? ──────────────→ debugging-and-error-recovery
     ├── Reviewing code? ───────────────→ code-review-and-quality
     │   ├── Too complex? ─────────────→ code-simplification
@@ -170,14 +175,20 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Define | interview-me | Surface what the user actually wants before any plan, spec, or code exists |
 | Define | idea-refine | Refine ideas through structured divergent and convergent thinking |
 | Define | spec-driven-development | Requirements and acceptance criteria before code |
+| Define | repo-workflow-and-triage | Wayfinder onboarding, issue triage, to-spec, to-tickets via docs/agents/ |
 | Plan | planning-and-task-breakdown | Decompose into small, verifiable tasks |
+| Plan | superpowers-autonomous-engineering | Multi-hour autonomous engineering with git worktrees and strict TDD |
+| Plan | codebase-knowledge-graph | AST + semantic interactive graph (.ua/) for massive codebases (>100k LOC) |
 | Build | incremental-implementation | Thin vertical slices, test each before expanding |
 | Build | source-driven-development | Verify against official docs before implementing |
 | Build | doubt-driven-development | Adversarial fresh-context review of every non-trivial decision |
 | Build | context-engineering | Right context at the right time |
+| Build | agentic-harness-patterns | Select, Write-back, Compress, Isolate harness primitives and schema consolidation |
 | Build | frontend-ui-engineering | Production-quality UI with accessibility |
+| Build | impeccable-frontend-design | 61 deterministic rules to eliminate AI slop, bespoke typography and polish |
 | Build | api-and-interface-design | Stable interfaces with clear contracts |
 | Verify | test-driven-development | Failing test first, then make it pass |
+| Verify | agent-browser-automation | Rust CDP client with compact accessibility-tree snapshots (@eN) |
 | Verify | browser-testing-with-devtools | Chrome DevTools MCP for runtime verification |
 | Verify | debugging-and-error-recovery | Reproduce → localize → fix → guard |
 | Review | code-review-and-quality | Five-axis review with quality gates |

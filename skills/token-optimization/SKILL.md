@@ -48,7 +48,12 @@ Never dump raw, multi-thousand-line implementation files into prompt context. An
    - Supports: JavaScript, TypeScript, Python, Go, and Rust.
    - Retain: `export interface`, `class headers`, `method(args): ReturnType`, decorators, and docstrings.
    - Strip: internal loops, private variable assignments, and helper logic.
-2. **Targeted Expansion**: Only read full un-skeletonized implementations for the 1–2 specific files actively being edited in the current turn.
+2. **Whole-Repository AST Packing (`repomix --compress`)**: For multi-file ingestion across codebases >100k lines, use `yamadashy/repomix`:
+   ```bash
+   npx repomix --compress
+   ```
+   Uses Tree-sitter parsers to compress the entire codebase into a clean, single-file context packet extracting class/function signatures and architectural relationships with ~70% token savings.
+3. **Targeted Expansion**: Only read full un-skeletonized implementations for the 1–2 specific files actively being edited in the current turn.
 
 ### Pillar 2: Prompt Cache Stratification (KV Cache Hit Optimization)
 
@@ -110,7 +115,9 @@ Do not wait until the context window hits 80% or 100%. Research and benchmarks d
    ```bash
    node skills/token-optimization/scripts/token-optimizer.js measure .
    ```
-3. **Proactive Checkpointing**: At task boundaries or upon reaching 50% context:
+3. **Canonical Fact Extraction (`compress-context`)**:
+   - Following `0-uddeshya-0/agent-skills` and `bm629/agent-skills`, compress conversation history by 60–75% by converting rambling conversational back-and-forth into terse canonical facts, state invariants, and concrete error states without discarding technical decisions.
+4. **Proactive Checkpointing**: At task boundaries or upon reaching 50% context:
    - Checkpoint current architecture decisions, modified file paths, and pending requirements into a durable markdown artifact (`tasks/session-state.md`).
    - Summarize past diagnostic iterations into one conclusion sentence (e.g. *"Auth issue traced to missing Bearer prefix in header — fixed in src/auth.ts"*).
    - Clear or compact transient history (`/compact` or fresh session restart) using the durable artifact as seed context.

@@ -4,14 +4,18 @@
   "description": "Agent architecture, memory, context, code archeology, reverse engineering, rigorous code review, and structured workflows.",
   "skills": [
     "agent-memory-and-instincts",
+    "agentic-harness-patterns",
     "code-archeology-and-anti-slop",
     "codebase-context-indexing",
+    "codebase-knowledge-graph",
     "hyper-efficient-agent-architecture",
     "langgraph-stateful-agent-design",
     "pydantic-ai-structured-agents",
+    "repo-workflow-and-triage",
     "reverse-engineering-and-binary-analysis",
     "smolagents-code-first-agents",
     "subagent-orchestration-and-delegation",
+    "superpowers-autonomous-engineering",
     "thermonuclear-code-review",
     "token-optimization",
     "unslop-code-and-prose"

@@ -96,6 +96,24 @@ Modern compiled languages carry distinct runtime footprints:
 | **C++** | Mangled names (`_Z...`); virtual method tables (`vtable`) | Reconstruct class hierarchies from RTTI (`type_info`) structures and vtable pointer arrays in `.rodata`. |
 | **.NET / CIL** | Structured metadata tables, IL bytecode | Decompile assemblies directly using `ilspycmd` or `dnSpy` to recover high-fidelity C# source and symbols. |
 | **Android / Java** | Dalvik Executable (`.dex`), manifest, resource tables | Disassemble and decompile with `jadx --deobf -d out target.apk` or unpack resources with `apktool d target.apk`. |
+| **Electron / Web** | ASAR archive (`app.asar`), V8 bytecode (`.jsc`), bundled JS | Unpack with `npx asar extract app.asar unpacked/`, restore sourcemaps, and inspect preload IPC bridges (`contextBridge.exposeInMainWorld`). |
+
+### Phase 3b: REA (Reverse Engineer Anything) Engine & MCP Bridges
+
+Following the `morluto/rea` workflow (ranked #1 globally among agent skills):
+
+1. **Connect Agent to Binary Engines via MCP (`npx rea-agents setup`):**
+   - Connect the AI coding harness directly to Ghidra, IDA Pro, Hopper, Rizin, or objdump through Model Context Protocol (MCP) tool servers.
+   - Enables the agent to query function disassembly, cross-references (XREFs), control flow graphs (CFGs), and decompiled C representations programmatically without manual copy-pasting.
+
+2. **Evidence Extraction & Trace Anchoring:**
+   - When reverse-engineering a proprietary feature or closed-source application, extract concrete ground-truth evidence: register mutations, IPC message schemas, and cryptographic constants.
+   - Anchor evidence in structured markdown (`docs/re/evidence-<feature>.md`) linking specific offsets or virtual addresses.
+
+3. **Clean-Room Feature Porting & Parity Rewriting:**
+   - Formalize the reversed algorithm into high-level mathematical or pseudocode specifications.
+   - Re-implement the feature cleanly in the target codebase (C/C++, TypeScript, Rust, or Go) without copying obfuscated artifact artifacts.
+   - Author full test suites asserting input/output parity against the recorded evidence traces.
 
 ### Phase 4: Dynamic Tracing and Instrumentation
 
