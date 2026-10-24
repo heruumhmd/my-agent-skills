@@ -1,0 +1,43 @@
+{
+  "skill_name": "impeccable-frontend-design",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Eliminate generic AI slop from our dashboard UI and replace purple gradients and Inter fonts with bespoke typography and taste.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Run an impeccable design audit and polish on this landing page component to fix nested cards, spacing rhythm, and typography scale.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Bersihkan AI slop pada antarmuka frontend, hilangkan font Inter bawaan, gradien ungu-biru klise, dan card di dalam card.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Write unit tests for the authentication reducer using red-green-refactor",
+        "owner": "test-driven-development"
+      },
+      {
+        "prompt": "Optimize SQL database query indexing for slow user search queries",
+        "owner": "performance-optimization"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Our new web application looks like every other generic AI generated template with neon purple gradients and nested card borders. Propose a design polish strategy.",
+      "expected_output": "A design refinement plan implementing intentional typography pairing, natural tonal lighting, removal of nested cards, and 8pt rhythmic grid spacing.",
+      "expectations": [
+        "Replaces generic AI gradients with intentional tonal palettes and natural lighting",
+        "Selects purposeful typography pairings rather than defaulting to generic Inter",
+        "Replaces nested card borders with whitespace and tonal background shifts",
+        "Enforces 8pt grid spatial rhythm and tactile micro-interactions"
+      ]
+    }
+  ]
+}

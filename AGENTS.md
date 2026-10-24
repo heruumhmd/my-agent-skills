@@ -35,16 +35,18 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
   - Planning / breakdown / Pecah task implementasi → `planning-and-task-breakdown`
   - API / endpoint / contract design / Desain interface → `api-and-interface-design`
   - Subagent delegation / Multi-agent research / Delegasi subagent → `subagent-orchestration-and-delegation`
+  - Autonomous engineering loop / Obra Superpowers / Git worktree isolation / 2-5 min task slicing / Strict TDD red-green-refactor / Subagent per task → `superpowers-autonomous-engineering`
 
 - **Implementation & Testing**:
   - Incremental slices / Perubahan bertahap → `incremental-implementation`
   - Test-Driven Development (TDD) / Red-Green-Refactor → `test-driven-development`
   - Frontend UI / Accessibility / Responsive layouts → `frontend-ui-engineering`
+  - Anti-slop frontend / Impeccable design / UI taste / Typography polish / Ban Inter font & purple-blue gradients → `impeccable-frontend-design`
   - Modern React & Next.js UI / shadcn/ui → `shadcn-ui-engineering`
   - Laravel & PHP backend / Service-Action architecture → `laravel-service-action-architecture`
 
 - **Reverse Engineering, Systems & Binary Analysis**:
-  - Reverse engineering / Binary triage (ELF, PE, Mach-O) / Decompilation / Protocol reversing / Bongkar file biner → `reverse-engineering-and-binary-analysis`
+  - Reverse engineering / morluto/rea / REA setup / Ghidra & IDA MCP / Binary triage (ELF, PE, Mach-O) / ASAR & Electron / Decompilation / Protocol reversing / Clean-room feature porting / Bongkar file biner → `reverse-engineering-and-binary-analysis`
   - Legacy codebase investigation / Git archeology & reality probing / Blast radius → `code-archeology-and-anti-slop`
 
 - **Code Review, Quality & Deslopping**:
@@ -57,6 +59,7 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
 - **Debugging, Reliability & Maintenance**:
   - Bug / failure / unexpected behavior / Diagnostic recovery → `debugging-and-error-recovery`
   - Browser testing & DevTools inspection → `browser-testing-with-devtools`
+  - Browser automation via Rust CDP / Accessibility-tree snapshots (@eN) / Token-efficient scraping & QA / vercel agent-browser → `agent-browser-automation`
   - Security auditing & hardening / OWASP protection → `security-and-hardening`
   - Performance optimization / Bottleneck tuning → `performance-optimization`
   - Observability / Instrumentation / Logging, metrics & tracing → `observability-and-instrumentation`
@@ -64,6 +67,7 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
 
 - **Git, Automation, CI/CD & Launch**:
   - Git workflow & atomic versioning / Release tagging → `git-workflow-and-versioning`
+  - Repo workflow / Issue triage / Matt Pocock skills standard / Wayfinder / docs/agents/ / To-spec & to-tickets → `repo-workflow-and-triage`
   - Architecture Decision Records (ADRs) & documentation → `documentation-and-adrs`
   - CI/CD build pipelines & quality gates → `ci-cd-and-automation`
   - Shipping & production launch checklist → `shipping-and-launch`
@@ -71,8 +75,10 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
 - **AI Agents, Frameworks & Machine Learning**:
   - Agent memory & persistent habits → `agent-memory-and-instincts`
   - Context window optimization & session engineering → `context-engineering`
-  - Token optimization, prompt compression & AST pruning / Hemat token / Menghemat token / Optimasi token → `token-optimization`
+  - Agentic harness patterns / Select-Writeback-Compress-Isolate / Memory persistence with mutex lock / Tool schema consolidation / keli-wen harness patterns → `agentic-harness-patterns`
+  - Token optimization, prompt caching, repomix --compress Tree-sitter packing & canonical fact compression / Hemat token / Menghemat token / Optimasi token → `token-optimization`
   - Codebase context indexing & vector search → `codebase-context-indexing`
+  - Codebase knowledge graph / Understand-Anything (.ua/) / AST + semantic graph / Navigasi codebase raksasa (>100k LOC) → `codebase-knowledge-graph`
   - 4-Engine hyper-efficient agent architecture → `hyper-efficient-agent-architecture`
   - PydanticAI type-safe structured agents → `pydantic-ai-structured-agents`
   - Smolagents code-first lightweight agents → `smolagents-code-first-agents`

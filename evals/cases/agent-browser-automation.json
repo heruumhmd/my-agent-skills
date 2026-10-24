@@ -1,0 +1,43 @@
+{
+  "skill_name": "agent-browser-automation",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "We need to run browser automation to test the login flow using CDP and accessibility tree snapshots to save tokens.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Automate filling out this complex multi-step web form using vercel agent-browser with @eN element handles.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Gunakan agent browser dengan accessibility tree snapshot untuk menguji flow web app tanpa memboroskan token dengan raw DOM.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Profile network waterfalls and Chrome performance memory allocations using DevTools MCP",
+        "owner": "browser-testing-with-devtools"
+      },
+      {
+        "prompt": "Write unit tests for the auth controller using red-green-refactor cycles",
+        "owner": "test-driven-development"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "We need to scrape table data and click a pagination button on a client-rendered dashboard without loading 50k tokens of raw HTML into context.",
+      "expected_output": "A plan utilizing native CDP browser automation with accessibility-tree snapshots and @eN handles for token-efficient interaction.",
+      "expectations": [
+        "Recommends accessibility-tree snapshots instead of dumping raw HTML or full screenshots",
+        "Dispatches actions against concise semantic handles such as @eN",
+        "Verifies state change deterministically through post-action accessibility tree deltas",
+        "Ensures browser session is cleanly terminated after task execution"
+      ]
+    }
+  ]
+}

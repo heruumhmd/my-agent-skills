@@ -1,0 +1,43 @@
+{
+  "skill_name": "agentic-harness-patterns",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "How can we design an agent harness with Select, Write-back, Compress, and Isolate primitives to prevent context rot?",
+        "top_k": 3
+      },
+      {
+        "prompt": "We need to structure memory persistence with mutex locks and git worktree isolation for our long-running autonomous agent.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Terapkan pola agentic harness patterns (Select, Write-back, Compress, Isolate) dan konsolidasi tool schema agar agent hemat konteks.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Write unit tests for the token bucket rate limiter using red-green-refactor",
+        "owner": "test-driven-development"
+      },
+      {
+        "prompt": "Audit the web application for SQL injection and cross-site scripting vulnerabilities",
+        "owner": "security-and-hardening"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Our agent pipeline crashes after 40 turns due to bloated context and file mutation conflicts between parallel subagents. Propose harness architectural patterns.",
+      "expected_output": "A harness architecture specification applying Select, Write-back with file locks, Compress with recovery pointers, and Git worktree isolation.",
+      "expectations": [
+        "Specifies Select for progressive disclosure of skills and schemas",
+        "Specifies Write-back for file-backed state persistence protected by atomic locks",
+        "Specifies Compress for factual summarization with line or commit recovery pointers",
+        "Specifies Isolate using git worktrees for subagent task sandboxing"
+      ]
+    }
+  ]
+}
