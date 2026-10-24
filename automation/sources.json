@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "description": "Registry of upstream repositories from which agent skills, recipes, and architecture patterns are sourced. Tracked for weekly synchronization.",
+  "sources": [
+    {
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills.git",
+      "role": "upstream-base",
+      "branch": "main",
+      "category": "core-engineering"
+    },
+    {
+      "name": "NVIDIA/skills",
+      "url": "https://github.com/NVIDIA/skills.git",
+      "role": "hardware-and-enterprise",
+      "branch": "main",
+      "category": "enterprise-agent"
+    },
+    {
+      "name": "VoltAgent/awesome-agent-skills",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills.git",
+      "role": "curated-catalog",
+      "branch": "main",
+      "category": "catalog"
+    },
+    {
+      "name": "morluto/rea",
+      "url": "https://github.com/morluto/rea.git",
+      "role": "reverse-engineering",
+      "branch": "main",
+      "skills": ["reverse-engineering-and-binary-analysis"]
+    },
+    {
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers.git",
+      "role": "autonomous-engineering",
+      "branch": "main",
+      "skills": ["superpowers-autonomous-engineering"]
+    },
+    {
+      "name": "Egonex-AI/Understand-Anything",
+      "url": "https://github.com/Egonex-AI/Understand-Anything.git",
+      "role": "knowledge-graph",
+      "branch": "main",
+      "skills": ["codebase-knowledge-graph"]
+    },
+    {
+      "name": "keli-wen/agentic-harness-patterns-skill",
+      "url": "https://github.com/keli-wen/agentic-harness-patterns-skill.git",
+      "role": "context-harness",
+      "branch": "main",
+      "skills": ["agentic-harness-patterns"]
+    },
+    {
+      "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git",
+      "role": "context-engineering",
+      "branch": "main",
+      "skills": ["context-engineering"]
+    },
+    {
+      "name": "bm629/agent-skills",
+      "url": "https://github.com/bm629/agent-skills.git",
+      "role": "token-optimization",
+      "branch": "main",
+      "skills": ["token-optimization"]
+    },
+    {
+      "name": "0-uddeshya-0/agent-skills",
+      "url": "https://github.com/0-uddeshya-0/agent-skills.git",
+      "role": "compress-context",
+      "branch": "main",
+      "skills": ["token-optimization"]
+    },
+    {
+      "name": "yamadashy/repomix",
+      "url": "https://github.com/yamadashy/repomix.git",
+      "role": "repo-packing",
+      "branch": "main",
+      "skills": ["token-optimization"]
+    },
+    {
+      "name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "role": "anti-slop-frontend",
+      "branch": "main",
+      "skills": ["impeccable-frontend-design"]
+    },
+    {
+      "name": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill.git",
+      "role": "ui-taste",
+      "branch": "main",
+      "skills": ["impeccable-frontend-design"]
+    },
+    {
+      "name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser.git",
+      "role": "browser-automation",
+      "branch": "main",
+      "skills": ["agent-browser-automation"]
+    },
+    {
+      "name": "gotalab/cc-sdd",
+      "url": "https://github.com/gotalab/cc-sdd.git",
+      "role": "spec-driven-development",
+      "branch": "main",
+      "skills": ["superpowers-autonomous-engineering", "spec-driven-development"]
+    },
+    {
+      "name": "initializ/forge",
+      "url": "https://github.com/initializ/forge.git",
+      "role": "agent-containerization",
+      "branch": "main",
+      "skills": ["agent-runtime-and-containerization"]
+    },
+    {
+      "name": "skrun-dev/skrun",
+      "url": "https://github.com/skrun-dev/skrun.git",
+      "role": "skill-runner",
+      "branch": "main",
+      "skills": ["agent-runtime-and-containerization"]
+    },
+    {
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills.git",
+      "role": "official-skills",
+      "branch": "main",
+      "skills": ["agent-runtime-and-containerization", "mcp-server-and-tool-integration"]
+    },
+    {
+      "name": "google/skills",
+      "url": "https://github.com/google/skills.git",
+      "role": "official-cloud-skills",
+      "branch": "main",
+      "skills": ["agent-runtime-and-containerization"]
+    },
+    {
+      "name": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers.git",
+      "role": "mcp-official-reference",
+      "branch": "main",
+      "skills": ["mcp-server-and-tool-integration"]
+    },
+    {
+      "name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills.git",
+      "role": "repo-workflow",
+      "branch": "main",
+      "skills": ["repo-workflow-and-triage"]
+    }
+  ]
+}

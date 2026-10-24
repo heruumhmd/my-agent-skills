@@ -1,0 +1,43 @@
+{
+  "skill_name": "agent-runtime-and-containerization",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Containerize our agent skill into a hardened OCI container with Kubernetes deployment manifests and a POST /run REST API endpoint.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Package this SKILL.md into a microservice using initializ forge and skrun runtime for cloud deployment.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Paketkan agent skill ini ke dalam kontainer OCI hardened dan buat endpoint REST POST /run untuk eksekusi microservice otonom.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Inspect the stripped binary file using Ghidra MCP to extract assembly instructions",
+        "owner": "reverse-engineering-and-binary-analysis"
+      },
+      {
+        "prompt": "Write an academic LaTeX paper with IEEE bibliography formatting",
+        "owner": "academic-journal-latex-workflow"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "We want to deploy a set of agent skills as autonomous background microservices in our Kubernetes cluster. How do we containerize them securely and expose them via a standardized REST API?",
+      "expected_output": "A containerization architecture using initializ/forge and skrun-dev/skrun: multi-stage distroless build, non-root user, read-only rootfs, POST /run HTTP API contract, and sandboxed Kubernetes Job manifest with gVisor.",
+      "expectations": [
+        "Enforces rootless container execution with dropped Linux capabilities and read-only root filesystem",
+        "Defines the universal POST /run contract for stateless JSON skill invocation",
+        "Configures Kubernetes manifest with explicit resource limits and security contexts",
+        "Explains Agent-to-Agent (A2A) capability discovery via /.well-known/agent-skills.json"
+      ]
+    }
+  ]
+}

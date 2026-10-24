@@ -84,6 +84,17 @@ foreach ($repo in @($repos.repositories)) {
     }
 }
 
+# Inspect and log tracked upstream sources
+$sourcesPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) 'automation\sources.json'
+if (Test-Path -LiteralPath $sourcesPath -PathType Leaf) {
+    try {
+        $sourceData = Get-Content -LiteralPath $sourcesPath -Raw | ConvertFrom-Json
+        $sourceCount = @($sourceData.sources).Count
+        Write-Result 'upstream-sources' 'TRACKED' "Monitored $sourceCount upstream skill repositories for updates."
+    } catch {
+        Write-Result 'upstream-sources' 'WARN' "Unable to parse sources manifest: $($_.Exception.Message)"
+    }
+}
 
 # Automatically sync to Antigravity global plugin directory
 $geminiPluginTarget = Join-Path ([Environment]::GetFolderPath('UserProfile')) '.gemini\config\plugins\heru-agent-skills'

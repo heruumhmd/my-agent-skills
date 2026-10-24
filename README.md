@@ -217,9 +217,9 @@ Already installed? How you roll the pack out depends on your codebase. The **[Ad
 
 ---
 
-## All 51 Skills
+## All 53 Skills
  
-The commands above are entry points. This distribution includes 51 skills total: 25 upstream lifecycle skills plus 26 Heru extensions for research, ML, reverse engineering, agent architecture, and web tooling. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
+The commands above are entry points. This distribution includes 53 skills total: 25 upstream lifecycle skills plus 28 Heru extensions for research, ML, reverse engineering, agent architecture, and web tooling. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 
 ### Meta - Discover which skill applies
 

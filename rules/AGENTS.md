@@ -71,12 +71,14 @@ These rules enforce a skill-first execution model across all conversations and t
      - Repo workflow / Issue triage / Matt Pocock skills standard / Wayfinder / docs/agents/ / To-spec & to-tickets → `repo-workflow-and-triage`
      - Architecture Decision Records (ADRs) & system documentation / Tulis keputusan arsitektur → `documentation-and-adrs`
      - CI/CD automation / Build pipelines & automated quality gates → `ci-cd-and-automation`
+     - Agent skill containerization / OCI Docker / Kubernetes / Microservice REST API (POST /run) / initializ/forge / skrun-dev/skrun / A2A endpoints / Paketkan skill ke kontainer → `agent-runtime-and-containerization`
      - Deployment / Pre-launch checklist / Staged rollout & shipping / Siap rilis ke produksi → `shipping-and-launch`
 
    - **AI Agents, Frameworks & Machine Learning**:
      - Persistent agent memory / Habits & instincts / Hindari kesalahan berulang agen → `agent-memory-and-instincts`
      - Context window engineering / Session optimization / Startup rules setup → `context-engineering`
      - Agentic harness patterns / Select-Writeback-Compress-Isolate / Memory persistence with mutex lock / Tool schema consolidation / keli-wen harness patterns → `agentic-harness-patterns`
+     - Model Context Protocol / MCP server / MCP builder / Stdio & SSE transport / Custom MCP connector / modelcontextprotocol/servers / Buat server MCP atau integrasi tool → `mcp-server-and-tool-integration`
      - Token optimization / Prompt compression / Kurangi penggunaan token / Hemat token / Menghemat token / Optimasi token / Kompresi prompt / Context compression / AST skeletons, prompt caching, repomix --compress & cache optimization → `token-optimization`
      - Local codebase indexing / Vector code search / Context retrieval → `codebase-context-indexing`
      - Codebase knowledge graph / Understand-Anything (.ua/) / AST + semantic graph / Navigasi codebase raksasa (>100k LOC) → `codebase-knowledge-graph`
