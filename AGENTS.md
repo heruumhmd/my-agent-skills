@@ -70,12 +70,14 @@ The agent should automatically map user intent (in English, Indonesian, or mixed
   - Repo workflow / Issue triage / Matt Pocock skills standard / Wayfinder / docs/agents/ / To-spec & to-tickets → `repo-workflow-and-triage`
   - Architecture Decision Records (ADRs) & documentation → `documentation-and-adrs`
   - CI/CD build pipelines & quality gates → `ci-cd-and-automation`
+  - Agent skill containerization / OCI Docker / Kubernetes / Microservice REST API (POST /run) / initializ/forge / skrun-dev/skrun / A2A endpoints / Paketkan skill ke kontainer → `agent-runtime-and-containerization`
   - Shipping & production launch checklist → `shipping-and-launch`
 
 - **AI Agents, Frameworks & Machine Learning**:
   - Agent memory & persistent habits → `agent-memory-and-instincts`
   - Context window optimization & session engineering → `context-engineering`
   - Agentic harness patterns / Select-Writeback-Compress-Isolate / Memory persistence with mutex lock / Tool schema consolidation / keli-wen harness patterns → `agentic-harness-patterns`
+  - Model Context Protocol / MCP server / MCP builder / Stdio & SSE transport / Custom MCP connector / modelcontextprotocol/servers / Buat server MCP atau integrasi tool → `mcp-server-and-tool-integration`
   - Token optimization, prompt caching, repomix --compress Tree-sitter packing & canonical fact compression / Hemat token / Menghemat token / Optimasi token → `token-optimization`
   - Codebase context indexing & vector search → `codebase-context-indexing`
   - Codebase knowledge graph / Understand-Anything (.ua/) / AST + semantic graph / Navigasi codebase raksasa (>100k LOC) → `codebase-knowledge-graph`

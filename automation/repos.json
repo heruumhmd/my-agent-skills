@@ -11,6 +11,12 @@
       "path": "D:\\nvidia-skills",
       "remote": "origin",
       "branch": "main"
+    },
+    {
+      "name": "awesome-agent-skills",
+      "path": "D:\\awesome-agent-skills",
+      "remote": "origin",
+      "branch": "main"
     }
   ]
 }

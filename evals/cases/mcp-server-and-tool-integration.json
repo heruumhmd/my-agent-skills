@@ -1,0 +1,43 @@
+{
+  "skill_name": "mcp-server-and-tool-integration",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Build a custom Model Context Protocol MCP server in TypeScript with tool schema validation and stdio transport.",
+        "top_k": 3
+      },
+      {
+        "prompt": "We need to expose our PostgreSQL database to AI agents via an official MCP server with the MCP inspector.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Buat server MCP kustom menggunakan TypeScript SDK dan validasi parameter dengan Zod serta uji dengan MCP inspector.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Refactor the bloated controller method into separate action classes",
+        "owner": "laravel-service-action-architecture"
+      },
+      {
+        "prompt": "Profile CSS layout shifts and optimize First Contentful Paint",
+        "owner": "performance-optimization"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "How do we create and test a custom Model Context Protocol (MCP) server in TypeScript that securely exposes read-only tools to Antigravity and Claude Code?",
+      "expected_output": "An MCP server architecture using @modelcontextprotocol/sdk: Zod schema validation, stdio transport, stderr logging isolation, path traversal defense, and interactive verification via @modelcontextprotocol/inspector.",
+      "expectations": [
+        "Uses official @modelcontextprotocol/sdk to define ListTools and CallTool handlers",
+        "Enforces strict input validation with Zod or Pydantic schemas",
+        "Isolates logs to stderr to avoid corrupting stdio JSON-RPC framing",
+        "Validates interactive functionality using @modelcontextprotocol/inspector"
+      ]
+    }
+  ]
+}

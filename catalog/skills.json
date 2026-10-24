@@ -2,9 +2,9 @@
   "schema_version": 2,
   "repository": "https://github.com/heruu-1/my-agent-skills",
   "release": "0.7.7",
-  "total_skills": 51,
+  "total_skills": 53,
   "upstream_skills": 25,
-  "extension_skills": 26,
+  "extension_skills": 28,
   "provenance": {
     "source_repository": "https://github.com/heruu-1/my-agent-skills",
     "source_commit": "fedd23c",
@@ -37,6 +37,13 @@
       "name": "agent-memory-and-instincts",
       "bundle": "heru-agent-engineering",
       "source_path": "skills/agent-memory-and-instincts",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "agent-runtime-and-containerization",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/agent-runtime-and-containerization",
       "license": "MIT",
       "modified": true
     },
@@ -100,6 +107,13 @@
       "name": "laravel-service-action-architecture",
       "bundle": "heru-web-tooling",
       "source_path": "skills/laravel-service-action-architecture",
+      "license": "MIT",
+      "modified": true
+    },
+    {
+      "name": "mcp-server-and-tool-integration",
+      "bundle": "heru-agent-engineering",
+      "source_path": "skills/mcp-server-and-tool-integration",
       "license": "MIT",
       "modified": true
     },
