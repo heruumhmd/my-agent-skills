@@ -1,6 +1,6 @@
 # Heru skill bundles
 
-The 19 Heru extensions are grouped into three independently buildable bundles:
+The 28 Heru extensions are grouped into three independently buildable bundles:
 
 - `heru-agent-engineering` — agent architecture, memory, context, code archeology, reverse engineering, and orchestration.
 - `heru-research-ml` — academic writing and machine-learning workflows.
