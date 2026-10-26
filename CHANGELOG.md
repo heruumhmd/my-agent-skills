@@ -32,6 +32,6 @@ All notable changes to this distribution are documented here. Versions follow Se
 
 ### Fixed
 
-- Public installation guides now target `heruu-1/my-agent-skills`.
+- Public installation guides now target `heruumhmd/my-agent-skills`.
 - Windows audit and updater exit-code handling were hardened.
 - Distribution tests now use portable paths on Windows and Linux.

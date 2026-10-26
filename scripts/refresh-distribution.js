@@ -81,7 +81,7 @@ function refreshDistribution(rootPath) {
   for (const relativePath of INSTALL_DOCS) {
     updateFile(path.join(root, relativePath), (text) => text.replace(/^.*$/gm, (line) => (
       INSTALL_COMMAND.test(line)
-        ? line.replace(/addyosmani\/agent-skills/ig, 'heruu-1/my-agent-skills')
+        ? line.replace(/addyosmani\/agent-skills/ig, 'heruumhmd/my-agent-skills')
         : line
     )), changedFiles);
   }

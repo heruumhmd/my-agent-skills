@@ -25,7 +25,7 @@ test('refreshes fork counts and install commands after an upstream merge', () =>
   }, null, 2)}\n`);
   write(root, 'README.md', [
     '## All 2 Skills',
-    'npx skills add heruu-1/my-agent-skills # install all 2 skills',
+    'npx skills add heruumhmd/my-agent-skills # install all 2 skills',
     '2 upstream lifecycle skills plus 1 extension.',
     '',
   ].join('\n'));
@@ -56,7 +56,7 @@ test('refreshes fork counts and install commands after an upstream merge', () =>
   assert.match(fs.readFileSync(path.join(root, '.codex-plugin/plugin.json'), 'utf8'), /Bundles 3 engineering/);
 
   const openCode = fs.readFileSync(path.join(root, 'docs/opencode-setup.md'), 'utf8');
-  assert.match(openCode, /npx skills add heruu-1\/my-agent-skills --list/);
+  assert.match(openCode, /npx skills add heruumhmd\/my-agent-skills --list/);
   assert.match(openCode, /Source: https:\/\/github\.com\/addyosmani\/agent-skills/);
 });
 

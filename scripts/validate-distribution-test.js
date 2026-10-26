@@ -19,7 +19,7 @@ test('rejects an installer that points at the upstream repository', () => {
 
 test('accepts the Heru distribution repository in install text', () => {
   assert.deepEqual(
-    validateInstallText('npx skills add heruu-1/my-agent-skills', 'fixture.md'),
+    validateInstallText('npx skills add heruumhmd/my-agent-skills', 'fixture.md'),
     [],
   );
 });

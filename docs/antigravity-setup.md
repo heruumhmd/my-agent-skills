@@ -11,14 +11,14 @@ Antigravity CLI has a first-class [plugin system](https://www.agy.dev/docs/plugi
 **Install from the remote repository:**
 
 ```bash
-agy plugin install https://github.com/heruu-1/my-agent-skills.git
+agy plugin install https://github.com/heruumhmd/my-agent-skills.git
 ```
 
 **Install from a local clone:**
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/heruu-1/my-agent-skills.git
+   git clone https://github.com/heruumhmd/my-agent-skills.git
    ```
 2. Install the plugin using `agy`:
    ```bash
