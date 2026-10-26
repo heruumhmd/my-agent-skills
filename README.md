@@ -46,7 +46,7 @@ Skills also activate automatically based on what you're doing — designing an A
 **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more):
 
 ```bash
-npx skills add heruu-1/my-agent-skills            # install all 51 skills
+npx skills add heruu-1/my-agent-skills            # install all 53 skills
 npx skills add heruu-1/my-agent-skills --list     # browse before installing
 ```
 
@@ -167,8 +167,10 @@ Use agent definitions from `agents/` as Copilot personas and skill content in `.
 </details>
 
 <details>
-  <summary><b>Kiro IDE & CLI </b></summary>
-  Skills for Kiro reside under ".kiro/skills/" and can be stored under Project or Global level. Kiro also supports Agents.md. See Kiro docs at https://kiro.dev/docs/skills/
+<summary><b>Kiro IDE & CLI</b></summary>
+
+Skills for Kiro reside under `.kiro/skills/` and can be stored at the Project or Global level. Kiro also supports `AGENTS.md`. See [Kiro skills documentation](https://kiro.dev/docs/skills/).
+
 </details>
 
 <details>
@@ -218,85 +220,149 @@ Already installed? How you roll the pack out depends on your codebase. The **[Ad
 ---
 
 ## All 53 Skills
- 
+
 The commands above are entry points. This distribution includes 53 skills total: 25 upstream lifecycle skills plus 28 Heru extensions for research, ML, reverse engineering, agent architecture, and web tooling. Each skill is a structured workflow with steps, verification gates, and anti-rationalization tables. You can also reference any skill directly.
 
-### Meta - Discover which skill applies
+### Core Development Lifecycle (25 Skills)
+
+#### Meta — Discover which skill applies
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
 | [using-agent-skills](skills/using-agent-skills/SKILL.md) | Maps incoming work to the right skill workflow and defines shared operating rules | Starting a session or deciding which skill applies |
 
-### Define - Clarify what to build
+#### Define — Clarify what to build
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [interview-me](skills/interview-me/SKILL.md) | One-question-at-a-time interview that extracts what the user actually wants instead of what they think they should want, until ~95% confidence | The ask is underspecified, or the user invokes "interview me" / "grill me" |
-| [idea-refine](skills/idea-refine/SKILL.md) | Structured divergent/convergent thinking to turn vague ideas into concrete proposals | You have a rough concept that needs exploration |
-| [spec-driven-development](skills/spec-driven-development/SKILL.md) | Write a PRD covering objectives, commands, structure, code style, testing, and boundaries before any code | Starting a new project, feature, or significant change |
-| [constraint-driven-development](skills/constraint-driven-development/SKILL.md) | Interviews you for a quality bar with sane default thresholds, writes CONSTRAINTS.md, places each check by cost, and catches agents silencing checks or skipping tests to get green | No standards are written down, or an agent is producing more than anyone reads |
+| [interview-me](skills/interview-me/SKILL.md) | One-question-at-a-time interview extracting underlying user requirements until ~95% confidence | The ask is underspecified, or when you invoke "interview me" / "grill me" |
+| [idea-refine](skills/idea-refine/SKILL.md) | Structured divergent/convergent thinking turning vague concepts into concrete proposals | You have a rough idea needing exploration before committing |
+| [spec-driven-development](skills/spec-driven-development/SKILL.md) | Write a PRD covering objectives, commands, structure, code style, testing, and boundaries | Starting a new project, feature, or significant architecture change |
+| [constraint-driven-development](skills/constraint-driven-development/SKILL.md) | Establishes quality bar in CONSTRAINTS.md and prevents agents from lowering standards | Defining quality thresholds or preventing skipped tests and suppressions |
 
-### Plan - Break it down
-
-| Skill | What It Does | Use When |
-|-------|-------------|----------|
-| [planning-and-task-breakdown](skills/planning-and-task-breakdown/SKILL.md) | Decompose specs into small, verifiable tasks with acceptance criteria and dependency ordering | You have a spec and need implementable units |
-
-### Build - Write the code
+#### Plan — Break it down
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [incremental-implementation](skills/incremental-implementation/SKILL.md) | Thin vertical slices - implement, test, verify, commit. Feature flags, safe defaults, rollback-friendly changes | Any change touching more than one file |
-| [test-driven-development](skills/test-driven-development/SKILL.md) | Red-Green-Refactor, test pyramid (80/15/5), test sizes, DAMP over DRY, Beyonce Rule, browser testing | Implementing logic, fixing bugs, or changing behavior |
-| [context-engineering](skills/context-engineering/SKILL.md) | Feed agents the right information at the right time - rules files, context packing, MCP integrations | Starting a session, switching tasks, or when output quality drops |
-| [token-optimization](skills/token-optimization/SKILL.md) | 5-pillar token economy: AST structural code skeletonization, KV cache prefix stratification, log filtering, 50% capacity compaction | Minimizing token costs, compressing prompts/code, preventing context rot |
-| [source-driven-development](skills/source-driven-development/SKILL.md) | Ground every framework decision in official documentation - verify, cite sources, flag what's unverified | You want authoritative, source-cited code for any framework or library |
-| [doubt-driven-development](skills/doubt-driven-development/SKILL.md) | Adversarial fresh-context review of every non-trivial decision in-flight - CLAIM → EXTRACT → DOUBT → RECONCILE → STOP, with optional user-authorized cross-model escalation | Stakes are high (production, security, irreversible), working in unfamiliar code, or a confident output is cheaper to verify now than to debug later |
-| [frontend-ui-engineering](skills/frontend-ui-engineering/SKILL.md) | Component architecture, design systems, state management, responsive design, WCAG 2.1 AA accessibility | Building or modifying user-facing interfaces |
-| [api-and-interface-design](skills/api-and-interface-design/SKILL.md) | Contract-first design, Hyrum's Law, One-Version Rule, error semantics, boundary validation | Designing APIs, module boundaries, or public interfaces |
+| [planning-and-task-breakdown](skills/planning-and-task-breakdown/SKILL.md) | Decomposes specs into small, verifiable tasks with acceptance criteria and dependency order | You have a spec and need atomic implementable units |
 
-### Verify - Prove it works
+#### Build — Write the code
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [browser-testing-with-devtools](skills/browser-testing-with-devtools/SKILL.md) | Chrome DevTools MCP for live runtime data - DOM inspection, console logs, network traces, performance profiling | Building or debugging anything that runs in a browser |
-| [debugging-and-error-recovery](skills/debugging-and-error-recovery/SKILL.md) | Five-step triage: reproduce, localize, reduce, fix, guard. Stop-the-line rule, safe fallbacks | Tests fail, builds break, or behavior is unexpected |
+| [incremental-implementation](skills/incremental-implementation/SKILL.md) | Thin vertical slices — implement, test, verify, commit. Rollback-friendly changes | Any change touching more than one file |
+| [test-driven-development](skills/test-driven-development/SKILL.md) | Red-Green-Refactor, test pyramid (80/15/5), DAMP over DRY, Beyonce Rule | Implementing logic, fixing bugs, or changing runtime behavior |
+| [context-engineering](skills/context-engineering/SKILL.md) | Feeds agents the right context at the right time — rules files, context packing, MCP setups | Starting a session, switching tasks, or when agent output drifts |
+| [source-driven-development](skills/source-driven-development/SKILL.md) | Grounds every framework decision in official documentation — verify and cite sources | Building with any framework or library where correctness matters |
+| [doubt-driven-development](skills/doubt-driven-development/SKILL.md) | Adversarial fresh-context review of every non-trivial decision in-flight | High-stakes decisions (production auth, migrations, irreversible ops) |
+| [frontend-ui-engineering](skills/frontend-ui-engineering/SKILL.md) | Component architecture, design systems, state management, and WCAG 2.1 AA accessibility | Building or modifying user-facing web interfaces |
+| [api-and-interface-design](skills/api-and-interface-design/SKILL.md) | Contract-first design, Hyrum's Law, One-Version Rule, error semantics, and boundary checks | Designing APIs, module boundaries, or public contracts |
+
+#### Verify — Prove it works
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [browser-testing-with-devtools](skills/browser-testing-with-devtools/SKILL.md) | Chrome DevTools MCP for live runtime data — DOM inspection, console logs, network traces | Building or debugging anything that runs in a browser |
+| [debugging-and-error-recovery](skills/debugging-and-error-recovery/SKILL.md) | Five-step triage: reproduce, localize, reduce, fix, guard. Stop-the-line rule | Tests fail, builds break, or runtime behavior is unexpected |
+
+#### Review — Quality gates before merge
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [code-review-and-quality](skills/code-review-and-quality/SKILL.md) | Five-axis review, change sizing (~100 lines), severity labels, review speed norms | Before merging any pull request or code change |
+| [code-simplification](skills/code-simplification/SKILL.md) | Chesterton's Fence, Rule of 500, reduces complexity while preserving exact behavior | Code works but is harder to read, maintain, or extend than needed |
+| [security-and-hardening](skills/security-and-hardening/SKILL.md) | OWASP Top 10 prevention, auth patterns, secrets management, dependency auditing | Handling user input, auth, data storage, or external integrations |
+| [performance-optimization](skills/performance-optimization/SKILL.md) | Measure-first approach — Core Web Vitals targets, profiling workflows, bundle analysis | Performance requirements exist or you suspect regressions |
+
+#### Ship — Deploy with confidence
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [git-workflow-and-versioning](skills/git-workflow-and-versioning/SKILL.md) | Trunk-based development, atomic commits, commit-as-save-point pattern | Making any code change (always active) |
+| [ci-cd-and-automation](skills/ci-cd-and-automation/SKILL.md) | Shift Left, Faster is Safer, feature flags, automated quality gate pipelines | Setting up or modifying build and deployment pipelines |
+| [deprecation-and-migration](skills/deprecation-and-migration/SKILL.md) | Code-as-liability mindset, compulsory vs advisory deprecation, safe schema migrations | Removing old systems, migrating users, or sunsetting features |
+| [documentation-and-adrs](skills/documentation-and-adrs/SKILL.md) | Architecture Decision Records (ADRs), API docs, inline documentation standards | Making architectural decisions, changing APIs, or shipping features |
+| [observability-and-instrumentation](skills/observability-and-instrumentation/SKILL.md) | Structured logging, RED/USE metrics, OpenTelemetry tracing, symptom-based alerting | Adding telemetry or shipping code that runs in production |
+| [shipping-and-launch](skills/shipping-and-launch/SKILL.md) | Pre-launch checklists, feature flag lifecycle, staged rollouts, rollback procedures | Preparing to deploy changes to production |
+
+---
+
+### Heru Extension Skills (28 Skills across 3 Bundles)
+
+#### Agent Architecture & Autonomous Engineering (18 skills · `heru-agent-engineering`)
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [agent-memory-and-instincts](skills/agent-memory-and-instincts/SKILL.md) | Enforces persistent architectural habits, distills lessons, and manages long-term agent memory | Preventing repeated agent mistakes across sessions |
+| [agent-runtime-and-containerization](skills/agent-runtime-and-containerization/SKILL.md) | Packages agent skills into hardened OCI containers, Kubernetes jobs, A2A endpoints, and REST APIs (`POST /run`) | Packaging skills for containerized production or MCP gateways |
+| [agentic-harness-patterns](skills/agentic-harness-patterns/SKILL.md) | Production agent harness engineering to prevent context rot via Select-Writeback-Compress-Isolate and mutex locks | Designing long-running agent loops or consolidating tool schemas |
 | [code-archeology-and-anti-slop](skills/code-archeology-and-anti-slop/SKILL.md) | Deep git history archeology, reality probing, and purging AI ceremonial boilerplate | Investigating unfamiliar legacy code or testing API behavior with probes |
-| [reverse-engineering-and-binary-analysis](skills/reverse-engineering-and-binary-analysis/SKILL.md) | Static decompilation, dynamic tracing, protocol reversing, firmware unpacking | Disassembling native binaries, decompiling bytecodes, or reversing protocols |
-
-### Review - Quality gates before merge
-
-| Skill | What It Does | Use When |
-|-------|-------------|----------|
-| [code-review-and-quality](skills/code-review-and-quality/SKILL.md) | Five-axis review, change sizing (~100 lines), severity labels (Nit/Optional/FYI), review speed norms, splitting strategies | Before merging any change |
-| [thermonuclear-code-review](skills/thermonuclear-code-review/SKILL.md) | Uncompromising structural critique, code-judo reframing, 1000-line boundary enforcement | Reviewing complex PRs to delete architectural bloat and cognitive debt |
-| [code-simplification](skills/code-simplification/SKILL.md) | Chesterton's Fence, Rule of 500, reduce complexity while preserving exact behavior | Code works but is harder to read or maintain than it should be |
+| [codebase-context-indexing](skills/codebase-context-indexing/SKILL.md) | Multi-file codebase indexing, local semantic code search, and pinpoint symbol definition retrieval | Managing large repos or retrieving symbol dependencies for agents |
+| [codebase-knowledge-graph](skills/codebase-knowledge-graph/SKILL.md) | Interactive AST and semantic knowledge graphs for massive repositories (>100k LOC) | Querying dependency call-graphs (.ua/) or multi-agent repository mapping |
+| [hyper-efficient-agent-architecture](skills/hyper-efficient-agent-architecture/SKILL.md) | 4-Engine hyper-efficient agent architecture: CodeAct, Actor-Critic, LangGraph state machines, speculative drafting | Building high-throughput, low-latency multi-agent systems |
+| [langgraph-stateful-agent-design](skills/langgraph-stateful-agent-design/SKILL.md) | Multi-agent state machines, cyclical agent workflows, human-in-the-loop gates, and persistent checkpoints | Implementing complex cyclic graphs or multi-agent orchestration |
+| [mcp-server-and-tool-integration](skills/mcp-server-and-tool-integration/SKILL.md) | Builds, tests, and deploys Model Context Protocol (MCP) servers with stdio and SSE transports | Creating custom MCP servers or integrating tools into AI workflows |
+| [pydantic-ai-structured-agents](skills/pydantic-ai-structured-agents/SKILL.md) | Production-ready, type-safe AI agents with strict schema validation and structured output models | Building type-safe agents with PydanticAI and dependency injection |
+| [repo-workflow-and-triage](skills/repo-workflow-and-triage/SKILL.md) | Standardizes repo workflows, issue triaging, and ticket specification decoupled from skill logic | Onboarding agents to repositories or triaging issues into specs |
+| [reverse-engineering-and-binary-analysis](skills/reverse-engineering-and-binary-analysis/SKILL.md) | Static decompilation, dynamic tracing (Frida/GDB), protocol reversing, and firmware unpacking | Disassembling native binaries (ELF/PE/Mach-O) or decompiling bytecodes |
+| [smolagents-code-first-agents](skills/smolagents-code-first-agents/SKILL.md) | Ultra-lightweight, code-first AI agents that think in code using Hugging Face smolagents | Implementing lightweight agents that execute code directly |
+| [subagent-orchestration-and-delegation](skills/subagent-orchestration-and-delegation/SKILL.md) | Multi-agent orchestration delegating focused tasks (research, security, review) to specialized workers | Orchestrating parallel workers or multi-perspective reviews |
+| [superpowers-autonomous-engineering](skills/superpowers-autonomous-engineering/SKILL.md) | Multi-hour autonomous software engineering via git worktree isolation, granular task slicing, and strict TDD | Running autonomous engineering loops that delete unverified code |
+| [thermonuclear-code-review](skills/thermonuclear-code-review/SKILL.md) | Uncompromising structural critique, code-judo reframing, and 1000-line boundary enforcement | Reviewing complex PRs to delete architectural bloat and cognitive debt |
+| [token-optimization](skills/token-optimization/SKILL.md) | 5-pillar token economy: AST structural code skeletonization, KV cache prefix stratification, log filtering, compaction | Minimizing token costs, compressing prompts/code, preventing context rot |
 | [unslop-code-and-prose](skills/unslop-code-and-prose/SKILL.md) | Eliminates AI writing tells, chatbot idioms, sycophancy, and filler from docs and code | Editing PR descriptions, documentation, ADRs, commit logs, or comments |
-| [security-and-hardening](skills/security-and-hardening/SKILL.md) | OWASP Top 10 prevention, auth patterns, secrets management, dependency auditing, three-tier boundary system | Handling user input, auth, data storage, or external integrations |
-| [performance-optimization](skills/performance-optimization/SKILL.md) | Measure-first approach - Core Web Vitals targets, profiling workflows, bundle analysis, anti-pattern detection | Performance requirements exist or you suspect regressions |
 
-### Ship - Deploy with confidence
+#### Research & Machine Learning (5 skills · `heru-research-ml`)
 
 | Skill | What It Does | Use When |
 |-------|-------------|----------|
-| [git-workflow-and-versioning](skills/git-workflow-and-versioning/SKILL.md) | Trunk-based development, atomic commits, change sizing (~100 lines), the commit-as-save-point pattern | Making any code change (always) |
-| [ci-cd-and-automation](skills/ci-cd-and-automation/SKILL.md) | Shift Left, Faster is Safer, feature flags, quality gate pipelines, failure feedback loops | Setting up or modifying build and deploy pipelines |
-| [deprecation-and-migration](skills/deprecation-and-migration/SKILL.md) | Code-as-liability mindset, compulsory vs advisory deprecation, migration patterns, zombie code removal | Removing old systems, migrating users, or sunsetting features |
-| [documentation-and-adrs](skills/documentation-and-adrs/SKILL.md) | Architecture Decision Records, API docs, inline documentation standards - document the *why* | Making architectural decisions, changing APIs, or shipping features |
-| [observability-and-instrumentation](skills/observability-and-instrumentation/SKILL.md) | Structured logging, RED metrics, OpenTelemetry tracing, symptom-based alerting - instrument as you build | Adding telemetry, or shipping anything that runs in production |
-| [shipping-and-launch](skills/shipping-and-launch/SKILL.md) | Pre-launch checklists, feature flag lifecycle, staged rollouts, rollback procedures, monitoring setup | Preparing to deploy to production |
+| [academic-journal-latex-workflow](skills/academic-journal-latex-workflow/SKILL.md) | Professional LaTeX drafting, structuring, formatting, and BibTeX debugging for academic journals | Writing papers to IEEE, ACM, Springer, Elsevier, or Scopus standards |
+| [applied-ml-system-design](skills/applied-ml-system-design/SKILL.md) | ML system architecture, model selection (heuristics vs ML vs LLM), and production inference pipelines | Designing end-to-end ML architectures and real-time inference systems |
+| [ml-data-preprocessing-and-leakage-prevention](skills/ml-data-preprocessing-and-leakage-prevention/SKILL.md) | Rigorous data preparation, missing value strategies, feature scaling, and strict train-test leakage prevention | Preparing datasets or verifying data pipeline splits before training |
+| [ml-model-evaluation-and-metrics](skills/ml-model-evaluation-and-metrics/SKILL.md) | Multi-metric model evaluation, confusion matrix diagnostics, ROC/PR curves, and error analysis | Benchmarking models, tuning classification thresholds, or validating metrics |
+| [neural-network-training-recipe](skills/neural-network-training-recipe/SKILL.md) | Karpathy training recipe: loss baselines, overfitting single batches, learning rate schedules, PyTorch optimization | Developing, debugging, and training deep learning neural networks |
+
+#### Modern Web, Frontend & Infrastructure (5 skills · `heru-web-tooling`)
+
+| Skill | What It Does | Use When |
+|-------|-------------|----------|
+| [agent-browser-automation](skills/agent-browser-automation/SKILL.md) | Browser automation using native Rust CDP clients and accessibility-tree snapshots (`@eN` references) | Token-efficient web scraping, form submission, and browser QA |
+| [impeccable-frontend-design](skills/impeccable-frontend-design/SKILL.md) | Purges generic AI frontend patterns; enforces bespoke typography, deliberate palettes, and visual hierarchy | Polishing web UI, banning default Inter fonts & purple-blue gradients |
+| [laravel-service-action-architecture](skills/laravel-service-action-architecture/SKILL.md) | Production Laravel & PHP backend patterns: Thin Controllers, Fat Actions, and Service-Action architecture | Structuring maintainable, decoupled business logic in Laravel apps |
+| [shadcn-ui-engineering](skills/shadcn-ui-engineering/SKILL.md) | Production-ready React & Next.js frontend engineering using Radix UI primitives and shadcn/ui components | Building accessible, composable component systems in TailwindCSS |
+| [uv-python-package-manager](skills/uv-python-package-manager/SKILL.md) | High-speed Python package and virtualenv management using Astral `uv` | Configuring fast virtualenvs, running standalone scripts, or locking dependencies |
+
+---
+
+## Heru Extension Bundles
+
+For modular deployments, the 28 Heru extension skills are packaged into three independently buildable bundles:
+
+| Bundle | Focus Area | Skills Count |
+|--------|------------|--------------|
+| `heru-agent-engineering` | Agent architecture, memory, context, code archeology, reverse engineering, and orchestration | 18 skills |
+| `heru-research-ml` | Academic LaTeX writing, ML system design, data leakage prevention, evaluation, and PyTorch training | 5 skills |
+| `heru-web-tooling` | Laravel Service-Action architecture, modern React/shadcn UI, browser automation, and `uv` package management | 5 skills |
+
+Build any bundle into a clean standalone distribution:
+
+```bash
+node scripts/build-bundle.js --bundle heru-research-ml --out ./dist/heru-research-ml
+```
 
 ---
 
 ## Agent Personas
 
-Pre-configured specialist personas for targeted reviews:
+Pre-configured specialist personas for targeted reviews and specialized engineering tasks:
 
 | Agent | Role | Perspective |
 |-------|------|-------------|
+| [academic-paper-writer](agents/academic-paper-writer.md) | Academic LaTeX Specialist | Drafting, structuring, and formatting journal and conference papers to IEEE/ACM/Springer/Elsevier standards |
 | [code-reviewer](agents/code-reviewer.md) | Senior Staff Engineer | Five-axis code review with "would a staff engineer approve this?" standard |
+| [ml-research-engineer](agents/ml-research-engineer.md) | Senior ML Engineer | Dataset audits, leakage inspection, neural network training verification, and metric evaluation |
+| [security-auditor](agents/security-auditor.md) | Security Engineer | Vulnerability detection, threat modeling, OWASP assessment, and security-focused review |
 | [test-engineer](agents/test-engineer.md) | QA Specialist | Test strategy, coverage analysis, and the Prove-It pattern |
-| [security-auditor](agents/security-auditor.md) | Security Engineer | Vulnerability detection, threat modeling, OWASP assessment |
 | [web-performance-auditor](agents/web-performance-auditor.md) | Web Performance Engineer | Core Web Vitals audit with Quick/Deep modes and a metric-honesty rule; run it via `/webperf` |
 
 See [docs/agents.md](docs/agents.md) for the decision matrix, orchestration rules, and how personas compose with skills and slash commands.
@@ -354,7 +420,7 @@ Every skill follows a consistent anatomy:
 
 ```
 agent-skills/
-├── skills/                            # 51 skills (25 upstream + 26 Heru extensions)
+├── skills/                            # 53 skills (25 upstream + 28 Heru extensions)
 │   ├── interview-me/                  #   Define
 │   ├── idea-refine/                   #   Define
 │   ├── spec-driven-development/       #   Define
@@ -362,7 +428,6 @@ agent-skills/
 │   ├── planning-and-task-breakdown/   #   Plan
 │   ├── incremental-implementation/    #   Build
 │   ├── context-engineering/           #   Build
-│   ├── token-optimization/            #   Build
 │   ├── source-driven-development/     #   Build
 │   ├── doubt-driven-development/      #   Build
 │   ├── frontend-ui-engineering/       #   Build
@@ -380,14 +445,15 @@ agent-skills/
 │   ├── documentation-and-adrs/        #   Ship
 │   ├── observability-and-instrumentation/ # Ship
 │   ├── shipping-and-launch/           #   Ship
-│   └── using-agent-skills/            #   Meta: how to use this pack
+│   ├── using-agent-skills/            #   Meta: how to use this pack
+│   └── ...                            #   28 Heru extensions across 3 bundles
 ├── agents/                            # 6 specialist personas
 ├── bundles/                           # 3 buildable Heru extension bundles
 ├── references/                        # 7 supplementary checklists
 ├── hooks/                             # Session lifecycle hooks
-├── .claude/commands/                  # 8 slash commands (Claude Code)
-├── .gemini/commands/                  # 8 slash commands (Gemini CLI)
-├── commands/                          # 8 slash commands (Antigravity CLI)
+├── .claude/commands/                  # 9 slash commands (Claude Code)
+├── .gemini/commands/                  # 9 slash commands (Gemini CLI)
+├── commands/                          # 9 slash commands (Antigravity CLI)
 ├── plugin.json                        # Antigravity plugin manifest
 └── docs/                              # Setup guides per tool
 ```
