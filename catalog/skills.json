@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "repository": "https://github.com/heruu-1/my-agent-skills",
+  "repository": "https://github.com/heruumhmd/my-agent-skills",
   "release": "0.7.7",
   "total_skills": 53,
   "upstream_skills": 25,
   "extension_skills": 28,
   "provenance": {
-    "source_repository": "https://github.com/heruu-1/my-agent-skills",
+    "source_repository": "https://github.com/heruumhmd/my-agent-skills",
     "source_commit": "fedd23c",
     "last_verified": "2026-08-25",
     "compatibility": [

@@ -4,7 +4,7 @@
 
 Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. This public distribution combines the upstream Agent Skills lifecycle with Heru's research, ML, agent-engineering, and Windows automation extensions.
 
-Maintained by [Muhammad Heru](https://github.com/heruu-1) and derived from [Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills) under the MIT license.
+Maintained by [Muhammad Heru](https://github.com/heruumhmd) and derived from [Addy Osmani's Agent Skills](https://github.com/addyosmani/agent-skills) under the MIT license.
 
 ```
   DEFINE          PLAN           BUILD          VERIFY         REVIEW          SHIP
@@ -46,16 +46,16 @@ Skills also activate automatically based on what you're doing — designing an A
 **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more):
 
 ```bash
-npx skills add heruu-1/my-agent-skills            # install all 53 skills
-npx skills add heruu-1/my-agent-skills --list     # browse before installing
+npx skills add heruumhmd/my-agent-skills            # install all 53 skills
+npx skills add heruumhmd/my-agent-skills --list     # browse before installing
 ```
 
 Or grab individual skills:
 
 ```bash
-npx skills add heruu-1/my-agent-skills --skill code-review-and-quality   # five-axis review before merge
-npx skills add heruu-1/my-agent-skills --skill interview-me              # requirements interrogation, one question at a time
-npx skills add heruu-1/my-agent-skills --skill test-driven-development   # red-green-refactor, enforced
+npx skills add heruumhmd/my-agent-skills --skill code-review-and-quality   # five-axis review before merge
+npx skills add heruumhmd/my-agent-skills --skill interview-me              # requirements interrogation, one question at a time
+npx skills add heruumhmd/my-agent-skills --skill test-driven-development   # red-green-refactor, enforced
 ```
 
 > **Installing one skill?** A per-skill `npx` install copies only
@@ -73,13 +73,13 @@ Prefer a native integration? Pick your tool below.
 **Marketplace install:**
 
 ```
-/plugin marketplace add heruu-1/my-agent-skills
+/plugin marketplace add heruumhmd/my-agent-skills
 /plugin install agent-skills@addy-agent-skills
 ```
 
 > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or use the full HTTPS URL to force HTTPS cloning during the marketplace-add step:
 > ```bash
-> /plugin marketplace add https://github.com/heruu-1/my-agent-skills.git
+> /plugin marketplace add https://github.com/heruumhmd/my-agent-skills.git
 > /plugin install agent-skills@addy-agent-skills
 > ```
 >
@@ -91,7 +91,7 @@ Prefer a native integration? Pick your tool below.
 **Local / development:**
 
 ```bash
-git clone https://github.com/heruu-1/my-agent-skills.git
+git clone https://github.com/heruumhmd/my-agent-skills.git
 claude --plugin-dir /path/to/agent-skills
 ```
 
@@ -112,13 +112,13 @@ Install as a native plugin for skills, subagents, and slash commands. See [docs/
 **Install from the repo:**
 
 ```bash
-agy plugin install https://github.com/heruu-1/my-agent-skills.git
+agy plugin install https://github.com/heruumhmd/my-agent-skills.git
 ```
 
 **Install from a local clone:**
 
 ```bash
-git clone https://github.com/heruu-1/my-agent-skills.git
+git clone https://github.com/heruumhmd/my-agent-skills.git
 agy plugin install ./agent-skills
 ```
 
@@ -132,7 +132,7 @@ Install as native skills for auto-discovery, or add to `GEMINI.md` for persisten
 **Install from the repo:**
 
 ```bash
-gemini skills install https://github.com/heruu-1/my-agent-skills.git --path skills
+gemini skills install https://github.com/heruumhmd/my-agent-skills.git --path skills
 ```
 
 **Install from a local clone:**
@@ -179,7 +179,7 @@ Skills for Kiro reside under `.kiro/skills/` and can be stored at the Project or
 Install as a native Codex plugin (Codex CLI v0.122+):
 
 ```bash
-codex plugin marketplace add heruu-1/my-agent-skills
+codex plugin marketplace add heruumhmd/my-agent-skills
 codex plugin add agent-skills@agent-skills
 ```
 
@@ -193,9 +193,9 @@ The first command registers the marketplace; the second installs the plugin. Cod
 Install natively with the built-in `cmd skills` command. Command Code clones the repo, discovers every `SKILL.md`, and installs into `.commandcode/skills/`:
 
 ```bash
-cmd skills add heruu-1/my-agent-skills            # pick skills to install (project)
-cmd skills add heruu-1/my-agent-skills --global   # install for all projects (~/.commandcode/skills/)
-cmd skills add heruu-1/my-agent-skills -s spec-driven-development  # install a specific skill
+cmd skills add heruumhmd/my-agent-skills            # pick skills to install (project)
+cmd skills add heruumhmd/my-agent-skills --global   # install for all projects (~/.commandcode/skills/)
+cmd skills add heruumhmd/my-agent-skills -s spec-driven-development  # install a specific skill
 ```
 
 Installed skills show up in the TUI slash menu, e.g. `/spec-driven-development`. See [docs/commandcode-setup.md](docs/commandcode-setup.md).
@@ -502,7 +502,7 @@ agent-skills is built and maintained by:
 
 | | Name | GitHub | Role |
 |---|------|--------|------|
-| <img src="https://github.com/heruu-1.png?size=120" width="60" height="60" alt="Muhammad Heru"> | **Muhammad Heru** | [@heruu-1](https://github.com/heruu-1) | Distribution maintainer |
+| <img src="https://github.com/heruumhmd.png?size=120" width="60" height="60" alt="Muhammad Heru"> | **Muhammad Heru** | [@heruumhmd](https://github.com/heruumhmd) | Distribution maintainer |
 | <img src="https://github.com/addyosmani.png?size=120" width="60" height="60" alt="Addy Osmani"> | **Addy Osmani** | [@addyosmani](https://github.com/addyosmani) | Creator |
 | <img src="https://github.com/federicobartoli.png?size=120" width="60" height="60" alt="Federico Bartoli"> | **Federico Bartoli** | [@federicobartoli](https://github.com/federicobartoli) | Collaborator |
 | <img src="https://github.com/nucliweb.png?size=120" width="60" height="60" alt="Joan León"> | **Joan León** | [@nucliweb](https://github.com/nucliweb) | Collaborator |

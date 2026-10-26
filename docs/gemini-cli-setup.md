@@ -9,13 +9,13 @@ Gemini CLI has a native skills system that auto-discovers `SKILL.md` files in `.
 **Install from the repo:**
 
 ```bash
-gemini skills install https://github.com/heruu-1/my-agent-skills.git --path skills
+gemini skills install https://github.com/heruumhmd/my-agent-skills.git --path skills
 ```
 
 **Or install from a local clone:**
 
 ```bash
-git clone https://github.com/heruu-1/my-agent-skills.git
+git clone https://github.com/heruumhmd/my-agent-skills.git
 gemini skills install /path/to/agent-skills/skills/
 ```
 

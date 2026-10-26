@@ -9,7 +9,7 @@ The Command Code binary is available as `cmd` (with aliases `cmdc` on Windows an
 **Project scope** (installs into `.commandcode/skills/` at the current git root — the default):
 
 ```bash
-cmd skills add heruu-1/my-agent-skills
+cmd skills add heruumhmd/my-agent-skills
 ```
 
 In an interactive terminal this shows a multi-select so you can choose which of the 44 skills to install. Pipe/non-interactive invocations install all discovered skills.
@@ -17,21 +17,21 @@ In an interactive terminal this shows a multi-select so you can choose which of 
 **Install a specific skill:**
 
 ```bash
-cmd skills add heruu-1/my-agent-skills -s spec-driven-development
+cmd skills add heruumhmd/my-agent-skills -s spec-driven-development
 ```
 
 **User scope** (installs into `~/.commandcode/skills/`, available in every project):
 
 ```bash
-cmd skills add heruu-1/my-agent-skills --global
+cmd skills add heruumhmd/my-agent-skills --global
 ```
 
 **Other supported forms:**
 
 ```bash
-cmd skills add heruu-1/my-agent-skills@main            # a specific branch
-cmd skills add heruu-1/my-agent-skills/skills/interview-me   # a specific path in the repo
-cmd skills add heruu-1/my-agent-skills --force         # overwrite / update if already installed
+cmd skills add heruumhmd/my-agent-skills@main            # a specific branch
+cmd skills add heruumhmd/my-agent-skills/skills/interview-me   # a specific path in the repo
+cmd skills add heruumhmd/my-agent-skills --force         # overwrite / update if already installed
 ```
 
 ## Manage

@@ -5,7 +5,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
-$repoUrl = 'https://github.com/heruu-1/my-agent-skills.git'
+$repoUrl = 'https://github.com/heruumhmd/my-agent-skills.git'
 
 if (-not (Get-Command git.exe -ErrorAction SilentlyContinue)) { throw 'git.exe is required.' }
 

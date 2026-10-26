@@ -5,7 +5,7 @@ This repository is also a [Codex plugin](https://developers.openai.com/codex/plu
 ## Install
 
 ```bash
-codex plugin marketplace add heruu-1/my-agent-skills
+codex plugin marketplace add heruumhmd/my-agent-skills
 codex plugin add agent-skills@agent-skills
 ```
 

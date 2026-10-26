@@ -4,7 +4,7 @@
   "description": "Production-grade engineering skills for AI coding agents — covering the full software development lifecycle from spec to ship.",
   "owner": {
     "name": "Heru",
-    "url": "https://github.com/heruu-1"
+    "url": "https://github.com/heruumhmd"
   },
   "plugins": [
     {
@@ -12,10 +12,10 @@
       "version": "0.7.7",
       "source": {
         "source": "github",
-        "repo": "heruu-1/my-agent-skills"
+        "repo": "heruumhmd/my-agent-skills"
       },
       "description": "Production-grade engineering skills covering every phase of software development: spec, plan, build, verify, review, and ship.",
-      "homepage": "https://github.com/heruu-1/my-agent-skills",
+      "homepage": "https://github.com/heruumhmd/my-agent-skills",
       "license": "MIT",
       "keywords": ["skills", "agents", "engineering", "spec", "tdd", "review", "ship"]
     }

@@ -5,8 +5,8 @@
   "author": {
     "name": "Heru"
   },
-  "homepage": "https://github.com/heruu-1/my-agent-skills",
-  "repository": "https://github.com/heruu-1/my-agent-skills",
+  "homepage": "https://github.com/heruumhmd/my-agent-skills",
+  "repository": "https://github.com/heruumhmd/my-agent-skills",
   "license": "MIT",
   "commands": ["./.claude/commands", "./commands"],
   "skills": "./skills"
