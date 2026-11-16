@@ -36,3 +36,16 @@ test('official Node actions use the reviewed Node 24 commit pins', () => {
 
   assert.deepEqual(observedActions, new Set(REQUIRED_PINS.keys()));
 });
+
+test('workflows using peter-evans/create-pull-request configure persist-credentials: false on checkout', () => {
+  for (const name of fs.readdirSync(WORKFLOW_DIR).filter(isWorkflowFile)) {
+    const workflow = fs.readFileSync(path.join(WORKFLOW_DIR, name), 'utf8');
+    if (workflow.includes('peter-evans/create-pull-request')) {
+      assert.match(
+        workflow,
+        /uses:\s+actions\/checkout[^\r\n]*[\s\S]*?persist-credentials:\s*false/,
+        `${name} must set persist-credentials: false on actions/checkout when using create-pull-request`
+      );
+    }
+  }
+});
