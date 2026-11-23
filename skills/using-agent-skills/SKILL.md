@@ -38,7 +38,8 @@ Task arrives
     ├── Reviewing code? ───────────────→ code-review-and-quality
     │   ├── Too complex? ─────────────→ code-simplification
     │   ├── Security concerns? ───────→ security-and-hardening
-    │   └── Performance concerns? ────→ performance-optimization
+    │   ├── Performance concerns? ────→ performance-optimization
+    │   └── Accessibility concerns? ──→ accessibility-engineering
     ├── Committing/branching? ─────────→ git-workflow-and-versioning
     ├── Building/testing MCP servers? ─→ mcp-server-and-tool-integration
     ├── Containerizing skills / K8s / REST microservices? → agent-runtime-and-containerization
@@ -198,6 +199,7 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Review | code-simplification | Preserve behavior while reducing unnecessary complexity |
 | Review | security-and-hardening | OWASP prevention, input validation, least privilege |
 | Review | performance-optimization | Measure first, optimize only what matters |
+| Review | accessibility-engineering | Audit an existing interface for WCAG 2.2 AA and remediate the violations found |
 | Ship | git-workflow-and-versioning | Atomic commits, clean history |
 | Ship | agent-runtime-and-containerization | Hardened OCI containers, Kubernetes jobs, REST POST /run and A2A endpoints |
 | Ship | ci-cd-and-automation | Automated quality gates on every change |
