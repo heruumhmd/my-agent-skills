@@ -2,8 +2,8 @@
   "schema_version": 2,
   "repository": "https://github.com/heruumhmd/my-agent-skills",
   "release": "0.7.7",
-  "total_skills": 53,
-  "upstream_skills": 25,
+  "total_skills": 54,
+  "upstream_skills": 26,
   "extension_skills": 28,
   "provenance": {
     "source_repository": "https://github.com/heruumhmd/my-agent-skills",
